@@ -1,0 +1,221 @@
+﻿id_estudiante,nombre,curso,ciclo,asistencia_pct,horas_estudio_semanal,tareas_entregadas_pct,participacion,nota_ep1,nota_ep2,nota_final
+E0001,María Aguilar,Matemática Discreta,2025-2,93.8,1.6,66.5,4,14.1,13.1,16.2
+E0002,Ricardo López,Redes de Computadoras,2025-2,89.2,7.5,67.6,3,12.1,11.0,10.9
+E0003,Iván Flores,Lenguajes de Programación,2025-2,68.3,4.6,86.7,3,14.3,17.2,13.4
+E0004,Tomás Vargas,Base de Datos,2025-2,74.3,7.8,71.8,2,9.9,10.3,10.4
+E0005,Bruno Reyes,Estructuras de Datos,2025-2,78.8,8.8,84.3,4,13.9,14.7,11.3
+E0006,Alejandra Ramírez,Matemática Discreta,2025-2,62.6,4.2,98.7,2,11.7,14.0,15.0
+E0007,Gabriela Rojas,Lenguajes de Programación,2025-2,78.7,6.2,99.2,3,10.1,10.7,13.2
+E0008,Gabriela Ortiz,Base de Datos,2025-2,76.8,7.9,94.9,3,14.9,15.6,15.7
+E0009,Bruno Herrera,Matemática Discreta,2025-2,70.5,6.5,82.9,3,10.9,11.8,9.0
+E0010,Ricardo Delgado,Lenguajes de Programación,2025-2,49.8,4.6,55.8,2,12.4,14.3,11.8
+E0011,Ximena Ramírez,Lenguajes de Programación,2025-2,81.7,0.1,83.8,3,8.5,11.1,10.2
+E0012,María Salazar,Estructuras de Datos,2025-2,94.4,5.3,,3,15.6,15.2,14.7
+E0013,Lucía Pérez,Lenguajes de Programación,2025-2,57.5,3.6,54.2,3,8.6,9.6,11.9
+E0014,Alonso Rodríguez,Lenguajes de Programación,2025-2,100.0,11.2,81.1,2,17.4,18.3,18.1
+E0015,Camila García,Base de Datos,2025-2,74.7,3.2,56.1,3,15.9,13.8,15.5
+E0016,Alejandra Chávez,Redes de Computadoras,2025-2,51.6,1.5,100.0,1,10.8,13.8,13.3
+E0017,Renata Mendoza,Redes de Computadoras,2025-2,73.8,3.3,56.4,1,14.2,12.3,12.1
+E0018,Jorge Pérez,Estructuras de Datos,2025-2,90.7,7.4,100.0,4,20.0,18.5,18.0
+E0019,Ana Pérez,Lenguajes de Programación,2025-2,68.6,10.0,62.0,2,13.6,14.5,14.4
+E0020,Alejandra Ortiz,Lenguajes de Programación,2025-2,90.2,10.7,60.5,4,12.6,13.4,14.3
+E0021,Ana Herrera,Lenguajes de Programación,2025-2,69.5,5.1,95.3,4,16.2,15.7,16.5
+E0022,Ximena Rojas,Estructuras de Datos,2025-2,63.8,6.6,84.8,5,16.9,18.0,16.0
+E0023,Mateo Aguilar,Redes de Computadoras,2025-2,78.3,6.4,57.4,4,12.6,12.3,13.7
+E0024,Ana Delgado,Redes de Computadoras,2025-2,85.9,0.0,51.8,4,14.8,16.3,17.7
+E0025,Diego Reyes,Base de Datos,2025-2,81.9,6.8,72.4,3,8.6,8.8,9.9
+E0026,Andrés Reyes,Lenguajes de Programación,2025-2,91.9,7.4,89.0,3,13.1,15.0,14.5
+E0027,Valeria Sánchez,Matemática Discreta,2025-2,69.7,3.4,100.0,4,12.5,16.9,16.5
+E0028,Alonso Sánchez,Redes de Computadoras,2025-2,73.4,5.2,71.8,3,11.4,13.7,7.1
+E0029,Bruno Flores,Matemática Discreta,2025-2,73.5,1.3,87.3,5,11.2,9.7,10.3
+E0030,Mateo López,Matemática Discreta,2025-2,87.3,7.1,100.0,4,15.9,14.2,15.3
+E0031,Gabriela Mendoza,Matemática Discreta,2025-2,79.9,1.1,86.2,2,15.3,17.2,16.0
+E0032,Renata Mendoza,Redes de Computadoras,2025-2,60.3,4.3,100.0,4,9.6,11.4,9.4
+E0033,Luis Rodríguez,Estructuras de Datos,2025-2,82.3,6.5,,3,12.2,14.3,8.3
+E0034,Renata Pérez,Redes de Computadoras,2025-2,61.9,11.6,90.3,4,14.3,15.0,14.0
+E0035,Alejandra Aguilar,Matemática Discreta,2025-2,64.6,3.8,78.8,3,8.0,10.7,7.4
+E0036,Camila Ortiz,Redes de Computadoras,2025-2,87.2,6.4,100.0,4,16.4,19.4,15.7
+E0037,Carlos Pérez,Estructuras de Datos,2025-2,71.7,9.0,52.3,1,6.7,8.8,9.3
+E0038,Alonso Herrera,Matemática Discreta,2025-2,33.2,3.3,61.6,2,11.4,12.7,12.1
+E0039,Fabián García,Base de Datos,2025-2,75.6,8.1,72.7,3,11.7,13.4,8.8
+E0040,Jorge Delgado,Redes de Computadoras,2025-2,32.2,1.0,79.4,2,11.4,12.1,10.2
+E0041,Carlos Pérez,Matemática Discreta,2025-2,89.6,6.2,81.9,3,13.6,15.7,17.8
+E0042,Sebastián Herrera,Matemática Discreta,2025-2,66.4,8.2,81.2,1,15.4,15.8,14.9
+E0043,Alonso Castillo,Estructuras de Datos,2025-2,77.1,6.7,98.3,3,10.4,8.6,11.3
+E0044,Bruno López,Lenguajes de Programación,2025-2,77.9,11.6,100.0,3,14.7,12.1,14.2
+E0045,Paula Chávez,Redes de Computadoras,2025-2,47.6,0.0,56.6,2,13.1,12.1,9.0
+E0046,Paula Flores,Estructuras de Datos,2025-2,67.5,5.7,86.0,2,12.9,15.0,19.8
+E0047,Isabela Mendoza,Redes de Computadoras,2025-2,82.9,6.0,78.2,2,13.0,15.6,16.8
+E0048,Ximena Reyes,Lenguajes de Programación,2025-2,77.6,4.5,91.7,1,8.5,9.5,14.4
+E0049,Iván López,Base de Datos,2025-2,30.0,1.4,100.0,2,8.5,5.8,7.8
+E0050,Renata Ortiz,Matemática Discreta,2025-2,83.6,6.9,89.3,2,17.5,13.9,13.9
+E0051,Alejandra Delgado,Matemática Discreta,2025-2,83.7,13.2,93.2,4,19.5,18.9,19.7
+E0052,Sofía Ortiz,Lenguajes de Programación,2025-2,67.0,1.3,84.7,1,4.6,6.2,8.1
+E0053,Gabriela Chávez,Estructuras de Datos,2025-2,75.8,2.7,89.3,4,14.4,14.3,17.7
+E0054,Lucía Flores,Estructuras de Datos,2025-2,62.9,2.3,58.9,2,12.6,12.4,11.2
+E0055,Ana Torres,Base de Datos,2025-2,65.6,7.3,81.5,1,12.8,11.4,13.3
+E0056,Diego Herrera,Redes de Computadoras,2025-2,100.0,7.9,96.1,2,13.0,12.1,15.2
+E0057,Sebastián Herrera,Redes de Computadoras,2025-2,69.5,9.2,55.0,3,13.0,13.8,15.2
+E0058,Ricardo Delgado,Estructuras de Datos,2025-2,86.0,2.3,94.2,3,17.3,,19.7
+E0059,Ricardo Reyes,Base de Datos,2025-2,64.6,0.0,70.0,1,8.7,8.3,11.7
+E0060,Luis Flores,Lenguajes de Programación,2025-2,86.3,3.5,75.6,3,10.6,9.4,9.7
+E0061,Renata Salazar,Base de Datos,2025-2,70.2,8.8,54.6,1,5.8,6.2,4.7
+E0062,Jorge Salazar,Lenguajes de Programación,2025-2,,9.1,100.0,4,13.3,14.7,10.9
+E0063,Luis Flores,Estructuras de Datos,2025-2,91.4,14.7,78.2,5,17.1,19.0,20.0
+E0064,Emilio Vargas,Estructuras de Datos,2025-2,57.9,0.0,,2,2.1,5.5,4.1
+E0065,Tomás Herrera,Base de Datos,2025-2,69.2,2.6,94.7,4,20.0,20.0,19.8
+E0066,Alonso Chávez,Estructuras de Datos,2025-2,96.3,5.7,78.5,3,18.8,16.2,16.3
+E0067,Bruno Mendoza,Redes de Computadoras,2025-2,57.5,5.4,75.9,1,11.6,13.0,15.5
+E0068,Paula García,Lenguajes de Programación,2025-2,64.0,7.1,57.1,1,11.5,13.1,12.3
+E0069,Camila Pérez,Estructuras de Datos,2025-2,72.4,2.3,56.5,4,10.6,12.2,14.6
+E0070,Fabián Rojas,Base de Datos,2025-2,49.0,7.4,72.3,3,4.7,7.4,7.0
+E0071,Renata García,Base de Datos,2025-2,79.7,8.9,94.3,2,9.6,10.2,6.7
+E0072,Sofía Salazar,Redes de Computadoras,2025-2,87.2,11.6,88.5,3,11.0,10.9,9.7
+E0073,Tomás Chávez,Redes de Computadoras,2025-2,75.3,10.8,98.7,4,19.9,20.0,20.0
+E0074,Tomás Gutiérrez,Lenguajes de Programación,2025-2,58.2,0.8,46.5,3,14.9,13.5,15.8
+E0075,Jorge Pérez,Matemática Discreta,2025-2,68.8,4.0,51.7,2,12.8,11.7,10.6
+E0076,Sofía Rojas,Redes de Computadoras,2025-2,73.0,2.8,78.1,2,10.8,10.9,7.3
+E0077,Diego García,Lenguajes de Programación,2025-2,97.9,8.2,75.8,3,17.1,18.7,19.0
+E0078,Alonso Ramírez,Matemática Discreta,2025-2,58.7,4.2,67.0,1,9.8,9.9,11.6
+E0079,Mateo Flores,Lenguajes de Programación,2025-2,64.1,5.1,100.0,2,5.6,8.7,8.9
+E0080,Lucía Vargas,Estructuras de Datos,2025-2,55.1,9.6,100.0,3,14.0,14.0,15.0
+E0081,Ana Sánchez,Estructuras de Datos,2025-2,94.5,5.4,100.0,3,13.0,17.6,14.5
+E0082,Ximena Flores,Estructuras de Datos,2025-2,80.3,6.5,100.0,4,16.1,16.9,17.4
+E0083,Luis Torres,Lenguajes de Programación,2025-2,47.9,3.9,73.4,2,10.6,12.3,12.1
+E0084,Isabela Castillo,Base de Datos,2025-2,65.7,8.7,83.2,1,8.8,8.8,9.1
+E0085,Andrés Gutiérrez,Matemática Discreta,2025-2,71.1,4.4,71.2,4,17.8,15.0,15.9
+E0086,Emilio Herrera,Matemática Discreta,2025-2,64.5,5.0,70.9,4,8.6,10.9,7.7
+E0087,Fabián Vargas,Lenguajes de Programación,2025-2,92.6,3.8,100.0,3,9.5,8.1,8.6
+E0088,Ximena Salazar,Estructuras de Datos,2025-2,73.1,10.1,100.0,5,17.8,13.2,15.6
+E0089,Luis Ortiz,Lenguajes de Programación,2025-2,67.3,10.5,72.9,3,11.1,11.3,12.3
+E0090,Natalia Rodríguez,Estructuras de Datos,2025-2,95.2,11.1,75.9,4,20.0,20.0,20.0
+E0091,Emilio Chávez,Lenguajes de Programación,2025-2,73.6,7.6,38.4,4,2.0,5.6,6.0
+E0092,Ricardo Salazar,Base de Datos,2025-2,84.3,3.1,100.0,2,14.7,12.7,10.9
+E0093,Camila Chávez,Matemática Discreta,2025-2,,1.0,82.9,2,8.7,,10.5
+E0094,Ana Chávez,Base de Datos,2025-2,77.8,2.7,50.4,3,9.3,12.2,13.4
+E0095,Tomás Reyes,Estructuras de Datos,2025-2,64.9,2.3,61.5,3,15.9,15.5,13.5
+E0096,Luis Gutiérrez,Estructuras de Datos,2025-2,84.1,7.9,98.5,4,12.5,14.3,13.6
+E0097,Alejandra Rodríguez,Base de Datos,2025-2,80.3,6.4,58.5,4,8.3,9.5,9.5
+E0098,Lucía López,Lenguajes de Programación,2025-2,68.2,7.3,82.9,3,14.3,10.5,13.2
+E0099,Alonso Chávez,Matemática Discreta,2025-2,87.5,9.6,83.0,2,13.4,14.5,16.5
+E0100,Jorge Flores,Estructuras de Datos,2025-2,91.2,4.7,100.0,4,14.1,14.3,14.8
+E0101,Isabela Ortiz,Base de Datos,2025-2,64.5,6.3,85.1,5,12.9,11.2,11.9
+E0102,Fabián Torres,Base de Datos,2025-2,77.6,11.3,76.7,4,12.4,11.2,13.8
+E0103,Sofía Reyes,Base de Datos,2025-2,59.7,4.9,54.5,2,15.1,17.6,12.5
+E0104,Sofía Ramírez,Redes de Computadoras,2025-2,75.6,7.8,82.9,3,10.5,10.6,14.3
+E0105,Sofía Vargas,Estructuras de Datos,2025-2,84.6,6.6,70.2,4,17.7,18.7,19.7
+E0106,Gabriela Ramírez,Estructuras de Datos,2025-2,88.3,8.8,68.5,4,10.0,13.4,13.2
+E0107,Jorge Herrera,Matemática Discreta,2025-2,60.6,4.0,72.0,3,9.7,8.0,10.5
+E0108,Alejandra Sánchez,Lenguajes de Programación,2025-2,,3.9,69.9,4,10.5,8.0,9.8
+E0109,Gabriela Mendoza,Estructuras de Datos,2025-2,86.8,12.6,92.0,4,16.2,19.1,12.6
+E0110,Alejandra Vargas,Base de Datos,2025-2,69.7,7.0,82.8,2,15.7,14.8,16.4
+E0111,Fabián Pérez,Redes de Computadoras,2025-2,83.3,7.4,100.0,1,9.4,11.0,11.2
+E0112,Mateo Ramírez,Matemática Discreta,2025-2,54.8,11.4,99.1,2,7.9,7.1,9.9
+E0113,Camila Vargas,Base de Datos,2025-2,49.9,3.2,72.7,2,7.0,4.8,7.3
+E0114,Ximena Flores,Lenguajes de Programación,2025-2,57.4,4.3,78.2,2,14.9,13.3,15.2
+E0115,Fernanda Sánchez,Estructuras de Datos,2025-2,51.6,8.0,54.3,1,9.3,8.9,8.0
+E0116,Alonso López,Base de Datos,2025-2,57.3,11.4,78.8,3,9.7,9.2,5.7
+E0117,Ximena Pérez,Lenguajes de Programación,2025-2,38.2,5.5,61.3,2,9.6,7.4,9.8
+E0118,Carlos Rodríguez,Base de Datos,2025-2,75.9,6.5,67.1,1,8.7,9.4,7.7
+E0119,Daniela Pérez,Matemática Discreta,2025-2,99.8,11.1,69.9,5,14.8,13.6,13.0
+E0120,Andrés Reyes,Redes de Computadoras,2025-2,54.6,8.6,100.0,2,12.2,12.7,15.2
+E0121,María Flores,Estructuras de Datos,2025-2,82.2,5.3,88.1,2,11.5,10.7,13.4
+E0122,María López,Estructuras de Datos,2025-2,99.4,11.5,79.1,4,13.0,12.3,16.3
+E0123,Emilio Rojas,Lenguajes de Programación,2025-2,60.9,2.3,100.0,4,14.6,16.9,20.0
+E0124,Ana Gutiérrez,Estructuras de Datos,2025-2,71.4,5.2,,3,13.2,14.8,14.0
+E0125,Emilio Rojas,Redes de Computadoras,2025-2,61.5,4.1,59.6,1,7.1,1.4,5.2
+E0126,Natalia Pérez,Lenguajes de Programación,2025-2,74.9,8.8,94.9,5,15.1,12.6,17.1
+E0127,Alonso López,Matemática Discreta,2025-2,56.0,6.6,94.3,3,8.8,10.4,6.1
+E0128,Lucía López,Lenguajes de Programación,2025-2,87.0,9.0,100.0,4,20.0,16.8,15.9
+E0129,Sofía Vargas,Base de Datos,2025-2,57.3,11.9,80.7,2,13.8,13.9,15.5
+E0130,Luis Aguilar,Redes de Computadoras,2025-2,100.0,8.1,77.2,3,12.5,12.6,15.0
+E0131,Diego Delgado,Base de Datos,2025-2,75.7,1.9,96.9,4,12.2,16.0,15.7
+E0132,Andrés Flores,Redes de Computadoras,2025-2,79.1,7.6,82.5,3,18.5,12.6,16.6
+E0133,Fabián Flores,Base de Datos,2025-2,90.9,2.9,85.8,2,13.8,11.0,12.9
+E0134,Fernanda Gutiérrez,Base de Datos,2025-2,100.0,9.2,100.0,3,19.5,20.0,19.6
+E0135,Sofía López,Lenguajes de Programación,2025-2,85.4,6.5,89.7,3,16.9,20.0,20.0
+E0136,Alonso Pérez,Lenguajes de Programación,2025-2,100.0,13.4,98.3,5,18.6,20.0,18.9
+E0137,Diego Salazar,Lenguajes de Programación,2025-2,92.1,10.1,83.3,3,10.7,13.8,13.5
+E0138,Ricardo Ortiz,Estructuras de Datos,2025-2,30.5,3.5,46.4,1,4.3,2.2,3.2
+E0139,Alonso Delgado,Lenguajes de Programación,2025-2,64.8,4.4,85.2,3,13.4,11.4,15.9
+E0140,Daniela Aguilar,Matemática Discreta,2025-2,97.1,12.5,83.4,4,20.0,19.0,16.8
+E0141,Daniela Castillo,Estructuras de Datos,2025-2,58.6,5.8,65.7,1,7.9,11.5,6.0
+E0142,Valeria Reyes,Lenguajes de Programación,2025-2,97.5,11.1,95.4,5,18.0,20.0,17.2
+E0143,Alejandra Pérez,Base de Datos,2025-2,68.6,2.9,59.0,2,9.2,7.3,10.5
+E0144,Camila Sánchez,Estructuras de Datos,2025-2,61.8,8.8,80.4,2,9.7,13.1,16.9
+E0145,Diego Ramírez,Base de Datos,2025-2,91.2,1.1,59.2,4,14.6,12.4,9.6
+E0146,Carlos Chávez,Redes de Computadoras,2025-2,44.7,0.0,51.6,2,8.9,6.2,10.7
+E0147,Daniela Vargas,Estructuras de Datos,2025-2,70.8,14.0,73.5,5,9.8,13.8,11.3
+E0148,Alonso López,Base de Datos,2025-2,76.1,10.6,78.3,1,12.4,12.5,9.3
+E0149,Ximena Rodríguez,Matemática Discreta,2025-2,54.8,3.4,66.1,3,13.9,,14.9
+E0150,Isabela Ramírez,Matemática Discreta,2025-2,52.2,1.8,53.4,2,9.6,12.3,12.1
+E0151,Renata Aguilar,Estructuras de Datos,2025-2,45.3,3.2,83.8,1,12.0,10.3,11.7
+E0152,Miguel Aguilar,Lenguajes de Programación,2025-2,54.4,0.0,93.2,2,9.5,9.7,11.7
+E0153,Ximena Salazar,Lenguajes de Programación,2025-2,83.4,7.6,100.0,2,15.7,16.2,11.9
+E0154,Tomás López,Lenguajes de Programación,2025-2,94.7,9.3,87.6,4,16.7,17.4,17.8
+E0155,Ana Ortiz,Estructuras de Datos,2025-2,82.8,12.8,91.9,5,20.0,20.0,20.0
+E0156,Paula Chávez,Redes de Computadoras,2025-2,70.6,2.4,77.4,1,5.3,5.3,6.1
+E0157,Sofía Ortiz,Lenguajes de Programación,2025-2,84.8,7.3,65.7,4,10.4,7.5,10.0
+E0158,Iván Salazar,Estructuras de Datos,2025-2,84.6,6.3,81.8,5,16.7,17.2,14.9
+E0159,Fernanda Aguilar,Estructuras de Datos,2025-2,84.1,14.7,69.5,3,20.0,18.6,20.0
+E0160,Isabela Chávez,Redes de Computadoras,2025-2,69.4,6.3,58.3,3,14.5,12.7,17.1
+E0161,Camila Salazar,Redes de Computadoras,2025-2,54.2,2.4,69.7,4,11.7,10.2,11.6
+E0162,Alejandra Reyes,Base de Datos,2025-2,77.3,3.0,66.3,3,12.7,11.7,16.8
+E0163,Bruno Sánchez,Estructuras de Datos,2025-2,57.8,4.2,36.1,2,14.3,15.6,17.3
+E0164,Ana García,Redes de Computadoras,2025-2,41.9,6.8,73.7,2,11.0,11.4,13.5
+E0165,Camila Sánchez,Lenguajes de Programación,2025-2,53.1,9.0,85.7,2,6.4,7.6,7.7
+E0166,María Vargas,Redes de Computadoras,2025-2,,1.6,72.0,4,9.2,,10.2
+E0167,Paula López,Matemática Discreta,2025-2,64.3,9.0,72.4,3,14.3,16.7,14.2
+E0168,Jorge Salazar,Redes de Computadoras,2025-2,61.6,8.0,84.2,4,15.5,17.4,15.4
+E0169,Renata Salazar,Estructuras de Datos,2025-2,51.8,3.5,53.3,3,12.3,7.7,8.7
+E0170,Lucía Delgado,Estructuras de Datos,2025-2,100.0,10.3,73.4,5,16.7,16.0,15.1
+E0171,Lucía Castillo,Estructuras de Datos,2025-2,96.4,10.7,61.6,4,14.8,17.5,18.3
+E0172,Emilio Flores,Matemática Discreta,2025-2,52.6,1.3,63.0,1,7.2,8.2,7.2
+E0173,Andrés Vargas,Base de Datos,2025-2,61.5,2.2,65.2,2,0.4,4.0,3.8
+E0174,Ximena Salazar,Base de Datos,2025-2,,7.9,83.6,2,7.7,8.7,8.2
+E0175,Lucía Reyes,Base de Datos,2025-2,100.0,5.1,83.5,4,13.6,16.2,16.8
+E0176,Andrés López,Estructuras de Datos,2025-2,74.1,10.9,68.2,3,14.9,11.6,11.7
+E0177,Luis Sánchez,Lenguajes de Programación,2025-2,59.2,5.7,61.4,2,10.5,10.5,8.7
+E0178,Ximena Reyes,Lenguajes de Programación,2025-2,90.2,3.9,98.2,3,20.0,19.9,19.9
+E0179,Gabriela López,Estructuras de Datos,2025-2,74.1,7.9,68.6,2,7.5,6.6,10.9
+E0180,Emilio Ortiz,Estructuras de Datos,2025-2,69.7,11.0,100.0,4,13.8,17.5,15.4
+E0181,Renata Aguilar,Estructuras de Datos,2025-2,92.7,4.7,,1,12.8,11.7,15.0
+E0182,Alejandra Rodríguez,Lenguajes de Programación,2025-2,57.6,7.1,80.4,2,10.1,,12.6
+E0183,Iván Delgado,Lenguajes de Programación,2025-2,73.3,6.1,30.0,4,2.5,5.3,3.4
+E0184,Emilio Salazar,Matemática Discreta,2025-2,76.4,0.0,88.2,2,6.4,6.1,9.3
+E0185,Tomás López,Base de Datos,2025-2,60.6,9.1,56.5,4,10.2,11.2,11.0
+E0186,Valeria Castillo,Redes de Computadoras,2025-2,61.2,0.0,75.1,1,10.0,10.3,15.5
+E0187,Ximena Aguilar,Lenguajes de Programación,2025-2,49.4,3.1,50.4,2,5.1,5.0,6.3
+E0188,Camila Salazar,Estructuras de Datos,2025-2,69.5,3.3,85.1,3,11.5,13.6,12.2
+E0189,Camila Ramírez,Estructuras de Datos,2025-2,75.9,11.7,65.2,5,20.0,20.0,19.5
+E0190,Ana García,Base de Datos,2025-2,63.0,4.6,81.0,2,8.3,11.2,11.8
+E0191,Andrés García,Redes de Computadoras,2025-2,80.6,7.1,79.3,3,18.1,18.1,20.0
+E0192,Renata Mendoza,Lenguajes de Programación,2025-2,74.4,2.9,52.1,3,9.2,14.0,12.7
+E0193,Ana Pérez,Base de Datos,2025-2,92.8,9.1,82.8,5,18.2,17.3,18.9
+E0194,Luis Gutiérrez,Estructuras de Datos,2025-2,44.0,5.0,30.3,2,10.4,8.0,10.2
+E0195,Diego García,Estructuras de Datos,2025-2,,10.5,71.0,4,18.1,20.0,16.3
+E0196,Miguel Salazar,Base de Datos,2025-2,73.0,5.5,73.6,1,10.6,14.5,18.1
+E0197,Lucía Herrera,Base de Datos,2025-2,74.9,1.7,75.6,2,13.4,11.5,12.0
+E0198,Carlos Reyes,Estructuras de Datos,2025-2,84.8,5.6,86.6,3,9.6,,11.7
+E0199,Alejandra García,Base de Datos,2025-2,61.7,3.6,37.4,1,11.4,9.4,11.6
+E0200,Camila Rojas,Redes de Computadoras,2025-2,81.6,6.2,76.8,4,16.4,15.9,17.4
+E0201,Carlos Aguilar,Matemática Discreta,2025-2,74.1,2.3,100.0,4,9.8,12.3,10.9
+E0202,Alejandra Herrera,Matemática Discreta,2025-2,76.4,6.4,94.4,5,19.1,18.3,19.1
+E0203,Fabián Vargas,Lenguajes de Programación,2025-2,78.7,8.5,89.2,3,11.3,11.5,12.1
+E0204,Natalia Aguilar,Base de Datos,2025-2,74.8,8.2,77.3,5,11.2,9.8,10.6
+E0205,Emilio Mendoza,Estructuras de Datos,2025-2,93.3,6.4,77.6,5,13.7,14.0,13.6
+E0206,Diego López,Redes de Computadoras,2025-2,72.9,5.1,88.1,2,9.7,10.6,10.5
+E0207,Carlos Rojas,Base de Datos,2025-2,61.3,1.7,,3,14.5,17.2,10.1
+E0208,Iván Salazar,Redes de Computadoras,2025-2,58.6,1.5,70.6,1,12.4,13.3,13.7
+E0209,Alonso García,Lenguajes de Programación,2025-2,99.0,4.7,81.9,3,18.2,17.9,20.0
+E0210,Mateo Gutiérrez,Estructuras de Datos,2025-2,71.1,4.5,86.4,4,9.9,10.5,10.3
+E0211,Jorge Torres,Matemática Discreta,2025-2,74.3,7.5,94.8,3,12.1,12.6,11.1
+E0212,Gabriela Delgado,Matemática Discreta,2025-2,100.0,13.3,74.8,4,15.3,14.8,13.3
+E0213,Alonso Chávez,Redes de Computadoras,2025-2,66.3,2.9,84.2,3,17.9,15.4,16.0
+E0214,Renata García,Lenguajes de Programación,2025-2,81.1,0.7,54.0,2,8.2,9.4,12.3
+E0215,Sofía Herrera,Estructuras de Datos,2025-2,90.3,6.0,63.8,3,17.0,14.0,15.6
+E0216,Renata Sánchez,Estructuras de Datos,2025-2,63.6,0.0,65.9,1,10.6,6.5,8.8
+E0217,Miguel Flores,Lenguajes de Programación,2025-2,89.2,8.8,80.6,2,13.7,11.7,14.7
+E0218,Diego Herrera,Lenguajes de Programación,2025-2,39.5,2.4,100.0,3,10.2,8.7,10.8
+E0219,Andrés Pérez,Matemática Discreta,2025-2,87.0,13.6,97.5,2,16.7,17.1,14.8
+E0220,Paula García,Matemática Discreta,2025-2,100.0,5.6,79.8,3,12.8,10.2,13.8

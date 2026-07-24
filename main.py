@@ -11,9 +11,10 @@ combinando tres paradigmas de programación:
 
   - PARADIGMA FUNCIONAL: funciones puras, map/filter/reduce para
     calcular promedios, tendencias y agregados sin efectos secundarios.
-  - PARADIGMA LÓGICO: un motor de reglas tipo "si-entonces" que
-    clasifica el riesgo académico a partir de condiciones sobre
-    asistencia, notas y participación.
+  - PARADIGMA LÓGICO: un motor de reglas en Prolog (reglas_riesgo.pl)
+    consultado desde Python via pyswip, que clasifica el riesgo
+    académico a partir de hechos y reglas sobre asistencia,
+    notas y participación.
   - PARADIGMA ORIENTADO A OBJETOS: clases que modelan Estudiante,
     Curso y el Evaluador de riesgo, organizando el estado y el
     comportamiento del sistema.

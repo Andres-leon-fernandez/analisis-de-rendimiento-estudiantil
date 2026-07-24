@@ -30,7 +30,7 @@ La aplicación toma un archivo de notas de estudiantes (CSV o Excel), calcula el
 
 **Problema que resuelve:** en cursos con muchos estudiantes es difícil detectar a tiempo quién necesita apoyo académico. El sistema automatiza ese diagnóstico a partir de datos que el docente ya recopila (notas, asistencia, tareas, participación).
 
-**Por qué es relevante para el curso:** es también un ejercicio académico que demuestra tres paradigmas de programación —funcional, lógico y orientado a objetos— cooperando sobre el mismo dominio dentro de una única aplicación real, en vez de tres ejemplos aislados.
+**Por qué es relevante para el curso:** es también un ejercicio académico que demuestra tres paradigmas de programación —funcional, **lógico (Prolog)** y orientado a objetos— cooperando sobre el mismo dominio dentro de una única aplicación real, en vez de tres ejemplos aislados.
 
 ---
 
@@ -41,7 +41,7 @@ La aplicación toma un archivo de notas de estudiantes (CSV o Excel), calcula el
 **Objetivos específicos:**
 
 - Calcular métricas de desempeño (promedio ponderado, índice de compromiso) mediante **funciones puras**, sin efectos secundarios ni estado mutable.
-- Clasificar el riesgo académico mediante un **motor de reglas lógicas** ("si-entonces"), inspirado en sistemas expertos, con reglas evaluadas en orden de severidad.
+- Clasificar el riesgo académico mediante un **motor de reglas declarativas en Prolog** (`reglas_riesgo.pl`), consultado desde Python via pyswip, con reglas inferidas por el motor de SWI-Prolog.
 - Modelar el dominio (`Estudiante`, `EvaluadorRiesgo`) con **programación orientada a objetos**, encapsulando estado y comportamiento.
 - Adaptarse automáticamente a distintos formatos de planilla de notas (número variable de exámenes, con o sin columna de curso) sin requerir configuración manual.
 - Presentar los resultados de forma visual (tabla filtrable + 4 gráficos) y exportable (CSV).
@@ -53,7 +53,7 @@ La aplicación toma un archivo de notas de estudiantes (CSV o Excel), calcula el
 | Paradigma | Dónde vive | Qué resuelve |
 |---|---|---|
 | **Funcional** | [`src/functional.py`](../functional.py) | Cálculo de promedio ponderado y compromiso mediante funciones puras (`map`/`filter`/`reduce`), sin efectos secundarios. |
-| **Lógico** | [`src/rules_engine.py`](../rules_engine.py) | Motor de reglas "si-entonces" tipo sistema experto que clasifica el riesgo. |
+| **Lógico** | [`src/rules_engine.py`](../rules_engine.py) + [`reglas_riesgo.pl`](../reglas_riesgo.pl) | Motor de reglas declarativas en **Prolog** (`reglas_riesgo.pl`), consultado desde Python via pyswip. Las reglas se infieren con el motor de SWI-Prolog. |
 | **Orientado a objetos** | [`src/models.py`](../models.py) | Clases `Estudiante` y `EvaluadorRiesgo` que modelan el dominio y orquestan el flujo. |
 
 La clave de diseño es que **ningún paradigma vive aislado**: `EvaluadorRiesgo` (OOP) orquesta el flujo llamando a `functional.py` para los cálculos y a `rules_engine.py` para la clasificación — cada `Estudiante` delega, no reimplementa.
@@ -134,7 +134,7 @@ sequenceDiagram
     participant Detector as detector_notas.py
     participant Eval as EvaluadorRiesgo
     participant Func as functional.py
-    participant Reglas as rules_engine.py
+    participant Reglas as rules_engine.py + reglas_riesgo.pl
     participant Graf as graficos.py
 
     Usuario->>GUI: "Examinar..." (elige CSV/Excel)
@@ -162,7 +162,8 @@ sequenceDiagram
 ```
 analisis-de-rendimiento-estudiantil/
 ├── main.py                                # Punto de entrada de la aplicación
-├── requirements.txt                       # Dependencias (pandas, numpy, matplotlib, openpyxl, Pillow)
+├── requirements.txt                       # Dependencias (pandas, numpy, matplotlib, openpyxl, Pillow, pyswip)
+├── reglas_riesgo.pl                       # Reglas de riesgo académico en Prolog
 ├── rendimiento_estudiantil.csv            # Dataset de ejemplo (220 estudiantes)
 ├── rendimiento_estudiantil_26.csv         # Dataset con perfiles de riesgo balanceados (60 estudiantes)
 ├── rendimiento_estudiantil_5000.csv       # Dataset de prueba de escala (5 000 estudiantes)
@@ -178,7 +179,7 @@ analisis-de-rendimiento-estudiantil/
     ├── carga.py            # Carga y limpieza de datos (pandas)
     ├── detector_notas.py   # Detección automática de columnas de notas
     ├── functional.py       # Paradigma funcional: cálculos puros
-    ├── rules_engine.py     # Paradigma lógico: motor de reglas
+    ├── rules_engine.py     # Paradigma lógico: puente Python↔Prolog (pyswip)
     ├── models.py            # Paradigma OOP: Estudiante y EvaluadorRiesgo
     ├── graficos.py          # Generación de visualizaciones (matplotlib)
     ├── gui.py               # Interfaz gráfica (Tkinter)
@@ -322,24 +323,26 @@ Funciones **puras** (sin efectos secundarios, mismo input → mismo output):
 - `aplicar_a_todos(func, valores)`: envoltorio sobre `map`.
 - `filtrar_por_condicion(estudiantes, condicion)`: envoltorio sobre `filter`, usado por `EvaluadorRiesgo.estudiantes_en_riesgo`.
 
-### 9.5 `src/rules_engine.py` — Paradigma lógico (sistema experto)
+### 9.5 `src/rules_engine.py` — Paradigma lógico (Prolog via pyswip)
 
-`evaluar_reglas_riesgo(promedio, asistencia, compromiso)` aplica reglas "si-entonces" **en orden de severidad**:
+`evaluar_reglas_riesgo(id_estudiante, promedio, asistencia, compromiso)` consulta el motor de inferencia de **SWI-Prolog** a través de `pyswip`.
 
-| Orden | Condición | Resultado |
-|---|---|---|
-| 1 | `promedio < 10.5` y `asistencia < 70` | **Alto** |
-| 2 | `promedio < 10.5` y `compromiso < 60` | **Alto** |
-| 3 | `promedio < 13` y `asistencia < 80` | **Medio** |
-| 4 | `compromiso < 65` | **Medio** |
-| 5 | `promedio >= 13` y `asistencia >= 80` y `compromiso >= 65` | **Bajo** |
-| — | cualquier otro caso no cubierto | **Medio** (regla de respaldo) |
+El archivo `reglas_riesgo.pl` define hechos dinámicos y reglas declarativas:
 
-`generar_recomendacion(nivel_riesgo)` mapea cada nivel a un mensaje de acción:
+- **Hechos dinámicos**: `estudiante_promedio/2`, `estudiante_asistencia/2`, `estudiante_compromiso/2`
+- **Reglas de inferencia**: `riesgo_alto/1`, `riesgo_medio/1`, `riesgo_bajo/1`
 
-- **Alto** → "Requiere tutoría académica inmediata y seguimiento semanal."
-- **Medio** → "Se recomienda reforzar hábitos de estudio y asistencia."
-- **Bajo** → "Mantener el desempeño actual; sin acciones urgentes."
+El flujo es: Python carga los hechos del estudiante en la base de conocimiento de Prolog → el motor de Prolog infiere el nivel de riesgo aplicando unificación y backtracking → Python extrae el resultado y limpia los hechos con `retractall`.
+
+| Condición Prolog | Resultado |
+|---|---|
+| `promedio < 10.5` y `asistencia < 70` | **Alto** |
+| `promedio < 10.5` y `compromiso < 60` | **Alto** |
+| `promedio < 13` y `asistencia < 80` | **Medio** |
+| `compromiso < 65` | **Medio** |
+| `promedio >= 13` y `asistencia >= 80` y `compromiso >= 65` | **Bajo** |
+
+`generar_recomendacion(nivel_riesgo)` se mantiene en Python puro (mapeo simple `dict → str`).
 
 ### 9.6 `src/models.py` — Paradigma orientado a objetos
 
@@ -393,7 +396,8 @@ Flujo al seleccionar archivo (`_seleccionar_archivo`): carga → detecta notas �
 ### 10.1 Requisitos previos
 
 - Python 3.10+ (el proyecto usa sintaxis moderna de tipos como `list[float]` y `X | None`).
-- Dependencias de `requirements.txt`: `pandas`, `numpy`, `matplotlib`, `openpyxl`, `Pillow`.
+- SWI-Prolog 8.x+ (necesario para pyswip, se instala desde [swi-prolog.org](https://swi-prolog.org)).
+- Dependencias de `requirements.txt`: `pandas`, `numpy`, `matplotlib`, `openpyxl`, `Pillow`, `pyswip`.
 - Tkinter (incluido en la instalación estándar de Python en Windows; en Linux puede requerir el paquete `python3-tk`).
 
 ### 10.2 Instalación
@@ -445,7 +449,7 @@ Todos incluyen un ~5-6% de celdas vacías intencionalmente (simulando datos falt
 - **Promedio**: suma ponderada de todas las notas detectadas, con pesos iguales que suman exactamente 1.0.
 - **Índice de compromiso**: promedio simple de `asistencia_pct`, `tareas_entregadas_pct` y `participacion × 20` (normalizada a escala 0-100).
 - **Aprobación** (solo para el filtro de la GUI, no afecta el nivel de riesgo): promedio ≥ 10.5 = Aprobado.
-- **Nivel de riesgo**: ver tabla de reglas en la [sección 9.5](#95-srcrules_enginepy--paradigma-lógico-sistema-experto).
+- **Nivel de riesgo**: ver tabla de reglas en la [sección 9.5](#95-srcrules_enginepy--paradigma-lógico-prolog-via-pyswip).
 - **Datos faltantes**: se imputan con la mediana de la columna correspondiente antes de cualquier cálculo.
 
 ---
@@ -457,7 +461,7 @@ Reconocer las limitaciones es parte de una buena sustentación — muestra crite
 | Limitación actual | Impacto | Mejora futura |
 |---|---|---|
 | Pesos de notas siempre iguales (`1/N`) | No se puede dar más peso a un examen final que a una práctica. | Permitir pesos configurables desde la GUI. |
-| Umbrales de riesgo fijos en `rules_engine.py` (10.5, 70, 80, etc.) | No se adaptan a distintos sistemas de calificación (p. ej. escala 0-100 o 0-4). | Externalizar los umbrales a un archivo de configuración. |
+| Umbrales de riesgo fijos en `reglas_riesgo.pl` (10.5, 70, 80, etc.) | No se adaptan a distintos sistemas de calificación (p. ej. escala 0-100 o 0-4). | Externalizar los umbrales a un archivo de configuración o parametrizar las reglas Prolog. |
 | Sin pruebas automatizadas (no hay carpeta `tests/`) | Los cambios futuros pueden romper reglas sin que nadie lo note de inmediato. | Agregar pruebas unitarias para `functional.py` y `rules_engine.py`, que son funciones puras fáciles de testear. |
 | `construir_estudiantes()` usa `iterrows()` fila por fila | Más lento que una operación vectorizada de pandas en datasets muy grandes (100 000+ filas). | Vectorizar la construcción usando operaciones de pandas/numpy directamente sobre el DataFrame. |
 | La imputación por mediana es global por columna | Si el dataset mezcla varios cursos con dificultades distintas, la mediana global puede no ser representativa para todos. | Imputar la mediana por grupo (`groupby("curso")`). |
@@ -474,10 +478,10 @@ La mediana es más robusta a valores atípicos (ej. un 0 por inasistencia justif
 El detector las reconoce todas automáticamente por prefijo y les asigna peso igual `1/10`, ajustando la última para sumar exactamente 1.0. No hay límite de columnas de nota.
 
 **¿Por qué el compromiso combina asistencia, tareas y participación en vez de solo mirar el promedio?**
-Un estudiante puede tener buen promedio y aun así estar en riesgo de abandono si deja de asistir o participar — el compromiso captura señales de alerta temprana que el promedio solo no ve (ver reglas 2 y 4 en la [sección 9.5](#95-srcrules_enginepy--paradigma-lógico-sistema-experto)).
+Un estudiante puede tener buen promedio y aun así estar en riesgo de abandono si deja de asistir o participar — el compromiso captura señales de alerta temprana que el promedio solo no ve (ver reglas 2 y 4 en la [sección 9.5](#95-srcrules_enginepy--paradigma-lógico-prolog-via-pyswip)).
 
 **¿Dónde está exactamente cada paradigma?**
-Ver la tabla de la [sección 3](#3-los-tres-paradigmas) y el diagrama de componentes de la [sección 4.1](#41-diagrama-de-componentes): `functional.py` (funcional), `rules_engine.py` (lógico), `models.py` (OOP).
+Ver la tabla de la [sección 3](#3-los-tres-paradigmas) y el diagrama de componentes de la [sección 4.1](#41-diagrama-de-componentes): `functional.py` (funcional), `rules_engine.py` + `reglas_riesgo.pl` (lógico/Prolog), `models.py` (OOP).
 
 **¿El sistema modifica las notas originales del archivo cargado?**
 No. Solo lee el archivo, lo limpia en memoria (rellenando NaN) y genera archivos nuevos (`_resultados.csv`, `*-img/`). El CSV/Excel original nunca se sobreescribe.

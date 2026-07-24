@@ -14,6 +14,7 @@ from src.functional import (
     filtrar_por_condicion,
 )
 from src.rules_engine import evaluar_reglas_riesgo, generar_recomendacion
+from src.config_manager import cargar_umbrales
 from src.carga import limpiar_datos
 
 
@@ -48,10 +49,11 @@ class Estudiante:
             self.asistencia_pct, self.tareas_entregadas_pct, self.participacion
         )
 
-    def evaluar_riesgo(self) -> None:
-        """Aplica el motor de reglas lógicas para determinar el riesgo."""
+    def evaluar_riesgo(self, umbrales: dict = None) -> None:
+        """Aplica el motor de reglas Prolog para determinar el riesgo."""
         self.nivel_riesgo = evaluar_reglas_riesgo(
-            self.promedio, self.asistencia_pct, self.indice_compromiso
+            self.id_estudiante, self.promedio, self.asistencia_pct, self.indice_compromiso,
+            umbrales=umbrales,
         )
         self.recomendacion = generar_recomendacion(self.nivel_riesgo)
 
@@ -64,8 +66,8 @@ class Estudiante:
 
 class EvaluadorRiesgo:
     """
-    Clase orquestadora: administra la colección de estudiantes,
-    ejecuta la evaluación completa y genera reportes agregados.
+    Clase orquestadora: administra la coleccion de estudiantes,
+    ejecuta la evaluacion completa y genera reportes agregados.
     """
 
     def __init__(self, dataframe: pd.DataFrame, config_notas: dict):
@@ -73,6 +75,7 @@ class EvaluadorRiesgo:
         self.config_notas = config_notas
         self.estudiantes: list[Estudiante] = []
         self._curso_col = config_notas.get("curso_col")
+        self.umbrales: dict = cargar_umbrales()
 
     def construir_estudiantes(self) -> None:
         """Convierte cada fila del DataFrame en un objeto Estudiante."""
@@ -102,10 +105,10 @@ class EvaluadorRiesgo:
             self.estudiantes.append(est)
 
     def evaluar_todos(self) -> None:
-        """Ejecuta el cálculo de métricas y la evaluación de riesgo para todos."""
+        """Ejecuta el calculo de metricas y la evaluacion de riesgo para todos."""
         for est in self.estudiantes:
             est.calcular_metricas()
-            est.evaluar_riesgo()
+            est.evaluar_riesgo(umbrales=self.umbrales)
 
     def estudiantes_en_riesgo(self, nivel: str = "Alto") -> list[Estudiante]:
         """Usa el paradigma funcional (filter) para obtener estudiantes por nivel."""

@@ -68,7 +68,7 @@ class VentanaPrincipal:
         header = ttk.Frame(self.root, bootstyle="primary")
         header.pack(fill="x")
         header_inner = ttk.Frame(header, bootstyle="primary")
-        header_inner.pack(fill="x", padx=26, pady=16)
+        header_inner.pack(fill="x", padx=24, pady=10)
 
         ttk.Label(
             header_inner, text="Análisis de Rendimiento Estudiantil",
@@ -81,14 +81,23 @@ class VentanaPrincipal:
         ).pack(anchor="w", pady=(2, 0))
 
         # ── Contenedor principal con márgenes ──
-        container = ttk.Frame(self.root, padding=(18, 14, 18, 0))
+        container = ttk.Frame(self.root, padding=(16, 10, 16, 0))
         container.pack(fill="both", expand=True)
+
+        # ── Panel de botones (se reserva primero, anclado abajo) ──
+        # Empaquetarlo antes que el resto del contenido garantiza que
+        # SIEMPRE quede visible: si la ventana es más baja que el
+        # contenido (portátiles de pantalla chica), es la tabla la que
+        # se encoge (tiene su propio scrollbar), nunca esta barra.
+        ttk.Separator(container, orient="horizontal").pack(side="bottom", fill="x")
+        self._frame_botones = ttk.Frame(container, padding=(0, 12))
+        self._frame_botones.pack(side="bottom", fill="x")
 
         # ── Panel superior: selector de archivo ──
         frame_archivo = ttk.Labelframe(
-            container, text="Cargar archivo de notas", bootstyle="secondary", padding=14,
+            container, text="Cargar archivo de notas", bootstyle="secondary", padding=10,
         )
-        frame_archivo.pack(fill="x", pady=(0, 12))
+        frame_archivo.pack(fill="x", pady=(0, 8))
 
         self.lbl_archivo = ttk.Label(
             frame_archivo,
@@ -105,9 +114,9 @@ class VentanaPrincipal:
 
         # ── Panel de resumen ──
         frame_resumen = ttk.Labelframe(
-            container, text="Resumen general", bootstyle="secondary", padding=14,
+            container, text="Resumen general", bootstyle="secondary", padding=10,
         )
-        frame_resumen.pack(fill="x", pady=(0, 12))
+        frame_resumen.pack(fill="x", pady=(0, 8))
 
         frame_tarjetas = ttk.Frame(frame_resumen)
         frame_tarjetas.pack(fill="x")
@@ -142,9 +151,9 @@ class VentanaPrincipal:
 
         # ── Panel de filtros ──
         frame_filtros = ttk.Labelframe(
-            container, text="Filtrar resultados", bootstyle="secondary", padding=12,
+            container, text="Filtrar resultados", bootstyle="secondary", padding=8,
         )
-        frame_filtros.pack(fill="x", pady=(0, 12))
+        frame_filtros.pack(fill="x", pady=(0, 8))
 
         # Fila 1: combos
         sub_frame_combos = ttk.Frame(frame_filtros)
@@ -201,12 +210,12 @@ class VentanaPrincipal:
         frame_tabla = ttk.Labelframe(
             container, text="Estudiantes evaluados", bootstyle="secondary", padding=8,
         )
-        frame_tabla.pack(fill="both", expand=True, pady=(0, 12))
+        frame_tabla.pack(fill="both", expand=True, pady=(0, 8))
 
         columnas = ("id", "nombre", "curso", "promedio", "asistencia", "compromiso", "riesgo", "recomendacion")
         self.tabla = ttk.Treeview(
             frame_tabla, columns=columnas, show="headings",
-            selectmode="browse", height=15, bootstyle="primary",
+            selectmode="browse", height=8, bootstyle="primary",
         )
 
         encabezados = {
@@ -255,11 +264,7 @@ class VentanaPrincipal:
 
         self.tabla.bind("<Double-1>", self._mostrar_detalle_estudiante)
 
-        # ── Panel de botones ──
-        ttk.Separator(container, orient="horizontal").pack(fill="x")
-        self._frame_botones = ttk.Frame(container, padding=(0, 12))
-        self._frame_botones.pack(fill="x")
-
+        # ── Botones de acción (el frame ya fue reservado y anclado abajo) ──
         self._btn_exportar = ttk.Button(
             self._frame_botones, text="Exportar CSV", bootstyle="success-outline",
             command=self._exportar_csv,
@@ -291,13 +296,13 @@ class VentanaPrincipal:
 
     def _crear_tarjeta_stat(self, parent: ttk.Frame, titulo: str, bootstyle: str, mostrar_barra: bool = True) -> dict:
         """Crea una tarjeta de estadística con valor grande, porcentaje y barra opcional."""
-        card = ttk.Labelframe(parent, text=titulo, bootstyle=bootstyle, padding=(14, 10))
+        card = ttk.Labelframe(parent, text=titulo, bootstyle=bootstyle, padding=(10, 6))
 
-        lbl_valor = ttk.Label(card, text="0", font=("Segoe UI", 26, "bold"), bootstyle=bootstyle)
+        lbl_valor = ttk.Label(card, text="0", font=("Segoe UI", 22, "bold"), bootstyle=bootstyle)
         lbl_valor.pack(anchor="w")
 
         lbl_pct = ttk.Label(card, text="—", font=("Segoe UI", 9), bootstyle="secondary")
-        lbl_pct.pack(anchor="w", pady=(0, 8 if mostrar_barra else 0))
+        lbl_pct.pack(anchor="w", pady=(0, 6 if mostrar_barra else 0))
 
         barra = None
         if mostrar_barra:

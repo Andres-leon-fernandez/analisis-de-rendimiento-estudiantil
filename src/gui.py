@@ -1,14 +1,17 @@
 """
 ==================================================================
- INTERFAZ GRÁFICA DE USUARIO (Tkinter)
+ INTERFAZ GRÁFICA DE USUARIO (ttkbootstrap sobre Tkinter)
  Ventana principal con selección de archivo, tabla de resultados,
  resumen estadístico, exportación y visualización de gráficos.
 ==================================================================
 """
 
 import tkinter as tk
-from tkinter import ttk, filedialog, messagebox
+from tkinter import filedialog
 import os
+
+import ttkbootstrap as ttk
+from ttkbootstrap.dialogs import Messagebox
 
 from src.carga import cargar_archivo
 from src.detector_notas import detectar_columnas_notas
@@ -28,11 +31,17 @@ class VentanaPrincipal:
         "Bajo": "#27ae60",
     }
 
+    BOOTSTYLE_RIESGO = {
+        "Alto": "danger",
+        "Medio": "warning",
+        "Bajo": "success",
+    }
+
     def __init__(self, root: tk.Tk):
         self.root = root
         self.root.title("Análisis de Rendimiento Estudiantil")
-        self.root.geometry("1100x750")
-        self.root.minsize(900, 600)
+        self.root.geometry("1200x800")
+        self.root.minsize(1000, 650)
 
         self.evaluador: EvaluadorRiesgo | None = None
         self._datos_completos: list[dict] = []
@@ -51,72 +60,118 @@ class VentanaPrincipal:
         """Construye todos los widgets de la ventana principal."""
         self._crear_vars_filtro()
 
+        estilo = ttk.Style()
+        estilo.configure("Treeview", rowheight=27, font=("Segoe UI", 10))
+        estilo.configure("Treeview.Heading", font=("Segoe UI", 10, "bold"))
+
+        # ── Encabezado ──
+        header = ttk.Frame(self.root, bootstyle="primary")
+        header.pack(fill="x")
+        header_inner = ttk.Frame(header, bootstyle="primary")
+        header_inner.pack(fill="x", padx=26, pady=16)
+
+        ttk.Label(
+            header_inner, text="Análisis de Rendimiento Estudiantil",
+            font=("Segoe UI", 19, "bold"), bootstyle="inverse-primary",
+        ).pack(anchor="w")
+        ttk.Label(
+            header_inner,
+            text="Evaluación automática de riesgo académico a partir de notas, asistencia y compromiso",
+            font=("Segoe UI", 10), bootstyle="inverse-primary",
+        ).pack(anchor="w", pady=(2, 0))
+
+        # ── Contenedor principal con márgenes ──
+        container = ttk.Frame(self.root, padding=(18, 14, 18, 0))
+        container.pack(fill="both", expand=True)
+
         # ── Panel superior: selector de archivo ──
-        frame_archivo = ttk.LabelFrame(self.root, text="Cargar archivo de notas", padding=10)
-        frame_archivo.pack(fill="x", padx=10, pady=(10, 5))
+        frame_archivo = ttk.Labelframe(
+            container, text="Cargar archivo de notas", bootstyle="secondary", padding=14,
+        )
+        frame_archivo.pack(fill="x", pady=(0, 12))
 
         self.lbl_archivo = ttk.Label(
             frame_archivo,
             text="Selecciona un archivo CSV o Excel (.xlsx / .xls)",
+            bootstyle="secondary",
         )
         self.lbl_archivo.pack(side="left", padx=(0, 10))
 
         btn_examinar = ttk.Button(
-            frame_archivo, text="Examinar...", command=self._seleccionar_archivo
+            frame_archivo, text="Examinar...", bootstyle="primary",
+            command=self._seleccionar_archivo,
         )
         btn_examinar.pack(side="right")
 
         # ── Panel de resumen ──
-        frame_resumen = ttk.LabelFrame(self.root, text="Resumen", padding=10)
-        frame_resumen.pack(fill="x", padx=10, pady=5)
+        frame_resumen = ttk.Labelframe(
+            container, text="Resumen general", bootstyle="secondary", padding=14,
+        )
+        frame_resumen.pack(fill="x", pady=(0, 12))
 
-        self.lbl_total = ttk.Label(frame_resumen, text="Total estudiantes: —")
-        self.lbl_total.pack(anchor="w")
+        frame_tarjetas = ttk.Frame(frame_resumen)
+        frame_tarjetas.pack(fill="x")
+        for col in range(4):
+            frame_tarjetas.columnconfigure(col, weight=1, uniform="stat")
 
-        # Barras de riesgo (etiqueta + barra de color proporcional)
-        self._frame_barras = ttk.Frame(frame_resumen)
-        self._frame_barras.pack(fill="x", pady=(5, 0))
+        self._tarjeta_total = self._crear_tarjeta_stat(
+            frame_tarjetas, "Total estudiantes", "primary", mostrar_barra=False,
+        )
+        self._tarjeta_total["card"].grid(row=0, column=0, padx=(0, 8), sticky="nsew")
 
-        self._barra_alto = self._crear_barra_riesgo(self._frame_barras, "Alto", self.COLORES_RIESGO["Alto"])
-        self._barra_medio = self._crear_barra_riesgo(self._frame_barras, "Medio", self.COLORES_RIESGO["Medio"])
-        self._barra_bajo = self._crear_barra_riesgo(self._frame_barras, "Bajo", self.COLORES_RIESGO["Bajo"])
+        self._tarjeta_alto = self._crear_tarjeta_stat(frame_tarjetas, "Riesgo Alto", "danger")
+        self._tarjeta_alto["card"].grid(row=0, column=1, padx=8, sticky="nsew")
 
-        self.lbl_notas = ttk.Label(frame_resumen, text="Columnas de nota detectadas: —")
-        self.lbl_notas.pack(anchor="w", pady=(5, 0))
+        self._tarjeta_medio = self._crear_tarjeta_stat(frame_tarjetas, "Riesgo Medio", "warning")
+        self._tarjeta_medio["card"].grid(row=0, column=2, padx=8, sticky="nsew")
 
-        self.lbl_curso = ttk.Label(frame_resumen, text="Columna curso: —")
+        self._tarjeta_bajo = self._crear_tarjeta_stat(frame_tarjetas, "Riesgo Bajo", "success")
+        self._tarjeta_bajo["card"].grid(row=0, column=3, padx=(8, 0), sticky="nsew")
+
+        self.lbl_notas = ttk.Label(
+            frame_resumen, text="Columnas de nota detectadas: —",
+            bootstyle="secondary", font=("Segoe UI", 9),
+        )
+        self.lbl_notas.pack(anchor="w", pady=(12, 0))
+
+        self.lbl_curso = ttk.Label(
+            frame_resumen, text="Columna curso: —",
+            bootstyle="secondary", font=("Segoe UI", 9),
+        )
         self.lbl_curso.pack(anchor="w")
 
         # ── Panel de filtros ──
-        frame_filtros = ttk.LabelFrame(self.root, text="Filtrar resultados", padding=8)
-        frame_filtros.pack(fill="x", padx=10, pady=5)
+        frame_filtros = ttk.Labelframe(
+            container, text="Filtrar resultados", bootstyle="secondary", padding=12,
+        )
+        frame_filtros.pack(fill="x", pady=(0, 12))
 
         # Fila 1: combos
         sub_frame_combos = ttk.Frame(frame_filtros)
-        sub_frame_combos.pack(fill="x", pady=(0, 5))
+        sub_frame_combos.pack(fill="x", pady=(0, 8))
 
         ttk.Label(sub_frame_combos, text="Riesgo:").pack(side="left", padx=(0, 4))
         self._combo_riesgo = ttk.Combobox(
             sub_frame_combos, textvariable=self._var_riesgo,
             values=["Todos", "Alto", "Medio", "Bajo"],
-            state="readonly", width=12,
+            state="readonly", width=12, bootstyle="primary",
         )
-        self._combo_riesgo.pack(side="left", padx=(0, 15))
+        self._combo_riesgo.pack(side="left", padx=(0, 18))
         self._combo_riesgo.bind("<<ComboboxSelected>>", lambda e: self._aplicar_filtros())
 
         ttk.Label(sub_frame_combos, text="Curso:").pack(side="left", padx=(0, 4))
         self._combo_curso = ttk.Combobox(
             sub_frame_combos, textvariable=self._var_curso,
-            state="readonly", width=22,
+            state="readonly", width=22, bootstyle="primary",
         )
-        self._combo_curso.pack(side="left", padx=(0, 15))
+        self._combo_curso.pack(side="left", padx=(0, 18))
         self._combo_curso.bind("<<ComboboxSelected>>", lambda e: self._aplicar_filtros())
 
         ttk.Label(sub_frame_combos, text="Estado:").pack(side="left", padx=(0, 4))
         self._combo_estado = ttk.Combobox(
             sub_frame_combos, textvariable=self._var_estado,
             values=["Todos", "Aprobado", "Desaprobado"],
-            state="readonly", width=14,
+            state="readonly", width=14, bootstyle="primary",
         )
         self._combo_estado.pack(side="left", padx=(0, 5))
         self._combo_estado.bind("<<ComboboxSelected>>", lambda e: self._aplicar_filtros())
@@ -133,22 +188,25 @@ class VentanaPrincipal:
         self._entry_buscar.bind("<Return>", lambda e: self._aplicar_filtros())
 
         btn_filtrar = ttk.Button(
-            sub_frame_buscar, text="Filtrar", command=self._aplicar_filtros,
+            sub_frame_buscar, text="Filtrar", bootstyle="primary-outline",
+            command=self._aplicar_filtros,
         )
-        btn_filtrar.pack(side="left", padx=(0, 15))
+        btn_filtrar.pack(side="left", padx=(0, 18))
 
         ttk.Label(sub_frame_buscar, text="Mostrando:").pack(side="left", padx=(0, 3))
-        self._lbl_mostrando = ttk.Label(sub_frame_buscar, text="—")
+        self._lbl_mostrando = ttk.Label(sub_frame_buscar, text="—", bootstyle="secondary")
         self._lbl_mostrando.pack(side="left")
 
         # ── Panel de tabla ──
-        frame_tabla = ttk.LabelFrame(self.root, text="Estudiantes evaluados", padding=5)
-        frame_tabla.pack(fill="both", expand=True, padx=10, pady=5)
+        frame_tabla = ttk.Labelframe(
+            container, text="Estudiantes evaluados", bootstyle="secondary", padding=8,
+        )
+        frame_tabla.pack(fill="both", expand=True, pady=(0, 12))
 
         columnas = ("id", "nombre", "curso", "promedio", "asistencia", "compromiso", "riesgo", "recomendacion")
         self.tabla = ttk.Treeview(
             frame_tabla, columns=columnas, show="headings",
-            selectmode="browse", height=15,
+            selectmode="browse", height=15, bootstyle="primary",
         )
 
         encabezados = {
@@ -177,8 +235,14 @@ class VentanaPrincipal:
         self.tabla.column("riesgo", width=90)
         self.tabla.column("recomendacion", width=350)
 
-        scroll_y = ttk.Scrollbar(frame_tabla, orient="vertical", command=self.tabla.yview)
-        scroll_x = ttk.Scrollbar(frame_tabla, orient="horizontal", command=self.tabla.xview)
+        self.tabla.tag_configure("oddrow", background="#f5f7f8")
+        self.tabla.tag_configure("evenrow", background="#ffffff")
+        self.tabla.tag_configure("alto", foreground=self.COLORES_RIESGO["Alto"])
+        self.tabla.tag_configure("medio", foreground=self.COLORES_RIESGO["Medio"])
+        self.tabla.tag_configure("bajo", foreground=self.COLORES_RIESGO["Bajo"])
+
+        scroll_y = ttk.Scrollbar(frame_tabla, orient="vertical", command=self.tabla.yview, bootstyle="round")
+        scroll_x = ttk.Scrollbar(frame_tabla, orient="horizontal", command=self.tabla.xview, bootstyle="round")
         self.tabla.configure(
             yscrollcommand=scroll_y.set, xscrollcommand=scroll_x.set
         )
@@ -192,67 +256,55 @@ class VentanaPrincipal:
         self.tabla.bind("<Double-1>", self._mostrar_detalle_estudiante)
 
         # ── Panel de botones ──
-        self._frame_botones = ttk.Frame(self.root, padding=10)
-        self._frame_botones.pack(fill="x", padx=10, pady=(0, 10))
+        ttk.Separator(container, orient="horizontal").pack(fill="x")
+        self._frame_botones = ttk.Frame(container, padding=(0, 12))
+        self._frame_botones.pack(fill="x")
 
         self._btn_exportar = ttk.Button(
-            self._frame_botones, text="Exportar CSV", command=self._exportar_csv
+            self._frame_botones, text="Exportar CSV", bootstyle="success-outline",
+            command=self._exportar_csv,
         )
-        self._btn_exportar.pack(side="left", padx=(0, 10))
+        self._btn_exportar.pack(side="left", padx=(0, 8))
         self._btn_exportar.state(["disabled"])
 
         self._btn_pdf = ttk.Button(
-            self._frame_botones, text="Exportar PDF", command=self._exportar_pdf
+            self._frame_botones, text="Exportar PDF", bootstyle="danger-outline",
+            command=self._exportar_pdf,
         )
-        self._btn_pdf.pack(side="left", padx=(0, 10))
+        self._btn_pdf.pack(side="left", padx=(0, 8))
         self._btn_pdf.state(["disabled"])
 
         self._btn_config = ttk.Button(
-            self._frame_botones, text="Configurar Umbrales",
+            self._frame_botones, text="Configurar Umbrales", bootstyle="info-outline",
             command=self._abrir_configuracion,
         )
-        self._btn_config.pack(side="left", padx=(0, 10))
+        self._btn_config.pack(side="left", padx=(0, 8))
 
         self._btn_pesos = ttk.Button(
-            self._frame_botones, text="Editar Pesos",
+            self._frame_botones, text="Editar Pesos", bootstyle="warning-outline",
             command=self._abrir_pesos,
         )
-        self._btn_pesos.pack(side="left", padx=(0, 10))
+        self._btn_pesos.pack(side="left", padx=(0, 8))
         self._btn_pesos.state(["disabled"])
 
         # "Ver Gráficos" se crea y muestra solo cuando hay datos cargados
 
-    def _crear_barra_riesgo(self, parent: ttk.Frame, nivel: str, color: str) -> dict:
-        """Crea una fila con etiqueta + canvas de barra proporcional para un nivel de riesgo."""
-        frame = ttk.Frame(parent)
-        frame.pack(fill="x", pady=1)
+    def _crear_tarjeta_stat(self, parent: ttk.Frame, titulo: str, bootstyle: str, mostrar_barra: bool = True) -> dict:
+        """Crea una tarjeta de estadística con valor grande, porcentaje y barra opcional."""
+        card = ttk.Labelframe(parent, text=titulo, bootstyle=bootstyle, padding=(14, 10))
 
-        lbl_nombre = ttk.Label(frame, text=f"{nivel}:", width=8, anchor="w",
-                               foreground=color, font=("Segoe UI", 9, "bold"))
-        lbl_nombre.pack(side="left", padx=(0, 5))
+        lbl_valor = ttk.Label(card, text="0", font=("Segoe UI", 26, "bold"), bootstyle=bootstyle)
+        lbl_valor.pack(anchor="w")
 
-        canvas = tk.Canvas(frame, height=18, highlightthickness=0, bg="#f0f0f0")
-        canvas.pack(side="left", fill="x", expand=True, padx=(0, 5))
+        lbl_pct = ttk.Label(card, text="—", font=("Segoe UI", 9), bootstyle="secondary")
+        lbl_pct.pack(anchor="w", pady=(0, 8 if mostrar_barra else 0))
 
-        lbl_valor = ttk.Label(frame, text="—", width=14, anchor="w")
-        lbl_valor.pack(side="left")
+        barra = None
+        if mostrar_barra:
+            barra = ttk.Progressbar(card, bootstyle=bootstyle, maximum=100, value=0)
+            barra.pack(fill="x")
 
-        return {"canvas": canvas, "label": lbl_valor, "color": color, "frame": frame}
-
-    def _dibujar_barra(self, barra: dict, cantidad: int, porcentaje: float, total: int) -> None:
-        """Dibuja una barra de color proporcional al porcentaje del nivel de riesgo."""
-        canvas = barra["canvas"]
-        canvas.update_idletasks()
-        ancho_max = canvas.winfo_width()
-
-        canvas.delete("all")
-        if total == 0:
-            barra["label"].config(text="—")
-            return
-
-        ancho_barra = max(2, int(ancho_max * porcentaje / 100))
-        canvas.create_rectangle(0, 0, ancho_barra, 18, fill=barra["color"], outline="")
-        barra["label"].config(text=f"{cantidad} ({porcentaje:.1f}%)")
+        return {"card": card, "valor": lbl_valor, "pct": lbl_pct, "barra": barra}
 
     def _seleccionar_archivo(self) -> None:
         """Abre el diálogo de selección de archivo y procesa los datos."""
@@ -302,12 +354,12 @@ class VentanaPrincipal:
             self._mostrar_graficos()
 
         except (FileNotFoundError, ValueError) as e:
-            messagebox.showerror("Error", str(e))
+            Messagebox.show_error(str(e), "Error")
             self.lbl_archivo.config(text="Selecciona un archivo CSV o Excel")
         except Exception as e:
-            messagebox.showerror(
-                "Error inesperado",
+            Messagebox.show_error(
                 f"Ocurrió un error al procesar el archivo:\n{e}",
+                "Error inesperado",
             )
             self.lbl_archivo.config(text="Selecciona un archivo CSV o Excel")
 
@@ -357,14 +409,10 @@ class VentanaPrincipal:
 
     def _refrescar_tabla(self, datos: list[dict]) -> None:
         """Limpia la tabla y la llena con los datos filtrados."""
-        self.tabla.tag_configure("alto", foreground=self.COLORES_RIESGO["Alto"])
-        self.tabla.tag_configure("medio", foreground=self.COLORES_RIESGO["Medio"])
-        self.tabla.tag_configure("bajo", foreground=self.COLORES_RIESGO["Bajo"])
-
         for item in self.tabla.get_children():
             self.tabla.delete(item)
 
-        for est in datos:
+        for idx, est in enumerate(datos):
             valores = (
                 est["id"],
                 est["nombre"],
@@ -375,14 +423,10 @@ class VentanaPrincipal:
                 est["riesgo"],
                 est["recomendacion"],
             )
-            item_id = self.tabla.insert("", "end", values=valores)
-
-            if est["riesgo"] == "Alto":
-                self.tabla.item(item_id, tags=("alto",))
-            elif est["riesgo"] == "Medio":
-                self.tabla.item(item_id, tags=("medio",))
-            elif est["riesgo"] == "Bajo":
-                self.tabla.item(item_id, tags=("bajo",))
+            banda = "oddrow" if idx % 2 else "evenrow"
+            riesgo_tag = {"Alto": "alto", "Medio": "medio", "Bajo": "bajo"}.get(est["riesgo"])
+            tags = (riesgo_tag, banda) if riesgo_tag else (banda,)
+            self.tabla.insert("", "end", values=valores, tags=tags)
 
         self._lbl_mostrando.config(text=f"{len(datos)} de {len(self._datos_completos)}")
 
@@ -396,9 +440,9 @@ class VentanaPrincipal:
             self._sort_col = columna
             self._sort_asc = True
 
-        flecha = " \u25B2" if self._sort_asc else " \u25BC"
+        flecha = " ▲" if self._sort_asc else " ▼"
         for col in self.tabla["columns"]:
-            texto = self.tabla.heading(col)["text"].rstrip(" \u25B2\u25BC")
+            texto = self.tabla.heading(col)["text"].rstrip(" ▲▼")
             self.tabla.heading(col, text=texto)
 
         texto_actual = self.tabla.heading(columna)["text"]
@@ -424,19 +468,24 @@ class VentanaPrincipal:
         return valor.lower() if isinstance(valor, str) else ""
 
     def _actualizar_resumen(self, config_notas: dict) -> None:
-        """Actualiza las etiquetas de resumen con los resultados."""
+        """Actualiza las tarjetas de resumen con los resultados."""
         resumen = self.evaluador.resumen_por_nivel()
         total = sum(resumen.values())
 
-        self.lbl_total.config(text=f"Total estudiantes: {total}")
+        self._tarjeta_total["valor"].config(text=str(total))
+        self._tarjeta_total["pct"].config(text="estudiantes evaluados")
 
-        alto_pct = (resumen["Alto"] / total * 100) if total else 0
-        medio_pct = (resumen["Medio"] / total * 100) if total else 0
-        bajo_pct = (resumen["Bajo"] / total * 100) if total else 0
-
-        self._dibujar_barra(self._barra_alto, resumen["Alto"], alto_pct, total)
-        self._dibujar_barra(self._barra_medio, resumen["Medio"], medio_pct, total)
-        self._dibujar_barra(self._barra_bajo, resumen["Bajo"], bajo_pct, total)
+        tarjetas = {
+            "Alto": self._tarjeta_alto,
+            "Medio": self._tarjeta_medio,
+            "Bajo": self._tarjeta_bajo,
+        }
+        for nivel, tarjeta in tarjetas.items():
+            cantidad = resumen[nivel]
+            porcentaje = (cantidad / total * 100) if total else 0
+            tarjeta["valor"].config(text=str(cantidad))
+            tarjeta["pct"].config(text=f"{porcentaje:.1f}% del total")
+            tarjeta["barra"]["value"] = porcentaje
 
         columnas = ", ".join(config_notas["columnas_nota"])
         self.lbl_notas.config(text=f"Columnas de nota detectadas: {columnas}")
@@ -459,7 +508,7 @@ class VentanaPrincipal:
         )
         if ruta:
             self.evaluador.exportar_resultados(ruta)
-            messagebox.showinfo("Exportado", f"Resultados guardados en:\n{ruta}")
+            Messagebox.show_info(f"Resultados guardados en:\n{ruta}", "Exportado")
 
     def _exportar_pdf(self) -> None:
         """Genera un reporte PDF con resumen, graficos y tabla de resultados."""
@@ -483,9 +532,9 @@ class VentanaPrincipal:
                 rutas_graficos,
                 self.evaluador.config_notas,
             )
-            messagebox.showinfo("PDF generado", f"Reporte guardado en:\n{ruta}")
+            Messagebox.show_info(f"Reporte guardado en:\n{ruta}", "PDF generado")
         except Exception as e:
-            messagebox.showerror("Error", f"No se pudo generar el PDF:\n{e}")
+            Messagebox.show_error(f"No se pudo generar el PDF:\n{e}", "Error")
 
     def _mostrar_boton_graficos(self) -> None:
         """Crea y muestra el botón 'Ver Gráficos' solo si hay gráficos generados."""
@@ -494,7 +543,7 @@ class VentanaPrincipal:
         if hasattr(self, '_btn_graficos') and self._btn_graficos.winfo_exists():
             return
         self._btn_graficos = ttk.Button(
-            self._frame_botones, text="Ver Gráficos",
+            self._frame_botones, text="Ver Gráficos", bootstyle="primary",
             command=self._mostrar_graficos,
         )
         self._btn_graficos.pack(side="left")
@@ -542,19 +591,19 @@ class VentanaGraficos:
 
     def __init__(self, parent: tk.Tk, rutas: list[str]):
         self._rutas = rutas
-        self.ventana = tk.Toplevel(parent)
-        self.ventana.title("Gráficos de Análisis")
-        self.ventana.geometry("900x700")
+        self.ventana = ttk.Toplevel(
+            title="Gráficos de Análisis", size=(950, 720), transient=parent,
+        )
 
         if not self._rutas:
             ttk.Label(
-                self.ventana, text="No se pudieron generar gráficos.",
+                self.ventana, text="No se pudieron generar gráficos.", bootstyle="secondary",
             ).pack(pady=20)
             return
 
         # Crear pestañas para cada gráfico
-        self._notebook = ttk.Notebook(self.ventana)
-        self._notebook.pack(fill="both", expand=True, padx=10, pady=10)
+        self._notebook = ttk.Notebook(self.ventana, bootstyle="primary")
+        self._notebook.pack(fill="both", expand=True, padx=12, pady=12)
 
         nombres = [
             "Distribución de Riesgo",
@@ -577,7 +626,7 @@ class VentanaGraficos:
 
         imagen = Image.open(ruta_imagen)
         # Redimensionar para que encaje en la ventana
-        ancho_max = 850
+        ancho_max = 890
         proporcion = ancho_max / imagen.width
         alto_max = int(imagen.height * proporcion)
         imagen = imagen.resize((ancho_max, alto_max), Image.LANCZOS)
@@ -592,116 +641,97 @@ class VentanaGraficos:
 class VentanaDetalleEstudiante:
     """Ventana emergente que muestra toda la información de un estudiante."""
 
-    COLORES_RIESGO = {
-        "Alto": "#e74c3c",
-        "Medio": "#f39c12",
-        "Bajo": "#27ae60",
+    BOOTSTYLE_RIESGO = {
+        "Alto": "danger",
+        "Medio": "warning",
+        "Bajo": "success",
     }
 
     def __init__(self, parent: tk.Tk, estudiante, config_notas: dict):
-        self.ventana = tk.Toplevel(parent)
-        self.ventana.title(f"Detalle — {estudiante.nombre}")
-        self.ventana.geometry("520x520")
-        self.ventana.resizable(False, False)
+        self.ventana = ttk.Toplevel(
+            title=f"Detalle — {estudiante.nombre}", size=(540, 560),
+            resizable=(False, False), transient=parent,
+        )
+
+        bootstyle = self.BOOTSTYLE_RIESGO.get(estudiante.nivel_riesgo, "secondary")
 
         # ── Encabezado con nombre y riesgo ──
-        frame_header = ttk.Frame(self.ventana, padding=15)
+        frame_header = ttk.Frame(self.ventana, bootstyle=bootstyle)
         frame_header.pack(fill="x")
+        header_inner = ttk.Frame(frame_header, bootstyle=bootstyle, padding=16)
+        header_inner.pack(fill="x")
 
         ttk.Label(
-            frame_header, text=estudiante.nombre,
-            font=("Segoe UI", 16, "bold"),
+            header_inner, text=estudiante.nombre,
+            font=("Segoe UI", 16, "bold"), bootstyle=f"inverse-{bootstyle}",
         ).pack(anchor="w")
 
-        lbl_id = ttk.Label(
-            frame_header,
-            text=f"ID: {estudiante.id_estudiante}  |  Curso: {estudiante.curso}",
-            font=("Segoe UI", 10),
-        )
-        lbl_id.pack(anchor="w", pady=(2, 0))
-
-        color = self.COLORES_RIESGO.get(estudiante.nivel_riesgo, "#333")
         ttk.Label(
-            frame_header,
+            header_inner,
+            text=f"ID: {estudiante.id_estudiante}  |  Curso: {estudiante.curso}",
+            font=("Segoe UI", 10), bootstyle=f"inverse-{bootstyle}",
+        ).pack(anchor="w", pady=(2, 0))
+
+        ttk.Label(
+            header_inner,
             text=f"Riesgo: {estudiante.nivel_riesgo}",
-            font=("Segoe UI", 12, "bold"),
-            foreground=color,
+            font=("Segoe UI", 12, "bold"), bootstyle=f"inverse-{bootstyle}",
         ).pack(anchor="w", pady=(6, 0))
 
-        ttk.Separator(self.ventana, orient="horizontal").pack(fill="x", padx=15)
-
         # ── Panel de datos ──
-        frame_datos = ttk.Frame(self.ventana, padding=15)
+        frame_datos = ttk.Frame(self.ventana, padding=16)
         frame_datos.pack(fill="both", expand=True)
 
         # Notas individuales
-        ttk.Label(
-            frame_datos, text="Notas individuales",
-            font=("Segoe UI", 10, "bold"),
-        ).grid(row=0, column=0, columnspan=2, sticky="w", pady=(0, 5))
+        frame_notas = ttk.Labelframe(frame_datos, text="Notas individuales", bootstyle="secondary", padding=10)
+        frame_notas.pack(fill="x", pady=(0, 10))
 
         col_nota = config_notas.get("columnas_nota", [])
         for i, col in enumerate(col_nota):
             nota = estudiante.notas[i] if i < len(estudiante.notas) else 0
             peso = estudiante.pesos[i] if i < len(estudiante.pesos) else 0
-            ttk.Label(frame_datos, text=f"  {col}:").grid(
-                row=i + 1, column=0, sticky="w", padx=(10, 0)
+            ttk.Label(frame_notas, text=f"{col}:").grid(
+                row=i, column=0, sticky="w", pady=2
             )
             ttk.Label(
-                frame_datos,
+                frame_notas,
                 text=f"{nota:.1f}  (peso: {peso:.2%})",
-            ).grid(row=i + 1, column=1, sticky="w")
-
-        # Separador
-        fila_sep = len(col_nota) + 1
-        ttk.Separator(frame_datos, orient="horizontal").grid(
-            row=fila_sep, column=0, columnspan=2, sticky="ew", pady=8
-        )
+                font=("Segoe UI", 9, "bold"),
+            ).grid(row=i, column=1, sticky="w", padx=(10, 0), pady=2)
 
         # Métricas calculadas
-        fila = fila_sep + 1
+        frame_metricas = ttk.Labelframe(frame_datos, text="Métricas calculadas", bootstyle="secondary", padding=10)
+        frame_metricas.pack(fill="x", pady=(0, 10))
+
         metricas = [
             ("Promedio ponderado:", f"{estudiante.promedio:.2f}"),
             ("Índice de compromiso:", f"{estudiante.indice_compromiso:.2f}"),
-            ("", ""),
             ("Asistencia:", f"{estudiante.asistencia_pct:.1f}%"),
             ("Horas de estudio/semana:", f"{estudiante.horas_estudio_semanal:.1f}"),
             ("Tareas entregadas:", f"{estudiante.tareas_entregadas_pct:.1f}%"),
             ("Participación:", f"{estudiante.participacion}/5"),
         ]
         for j, (etiqueta, valor) in enumerate(metricas):
-            if not etiqueta:
-                continue
-            ttk.Label(frame_datos, text=etiqueta, font=("Segoe UI", 9, "bold")).grid(
-                row=fila + j, column=0, sticky="w", padx=(10, 0), pady=1
+            ttk.Label(frame_metricas, text=etiqueta, font=("Segoe UI", 9, "bold")).grid(
+                row=j, column=0, sticky="w", pady=1
             )
-            ttk.Label(frame_datos, text=valor).grid(
-                row=fila + j, column=1, sticky="w", pady=1
+            ttk.Label(frame_metricas, text=valor).grid(
+                row=j, column=1, sticky="w", padx=(10, 0), pady=1
             )
-
-        # Separador
-        fila_sep2 = fila + len(metricas)
-        ttk.Separator(frame_datos, orient="horizontal").grid(
-            row=fila_sep2, column=0, columnspan=2, sticky="ew", pady=8
-        )
 
         # Recomendación
-        fila_rec = fila_sep2 + 1
+        frame_recomendacion = ttk.Labelframe(frame_datos, text="Recomendación", bootstyle=bootstyle, padding=10)
+        frame_recomendacion.pack(fill="both", expand=True)
         ttk.Label(
-            frame_datos, text="Recomendación:",
-            font=("Segoe UI", 9, "bold"),
-        ).grid(row=fila_rec, column=0, sticky="nw", padx=(10, 0), pady=1)
-        lbl_rec = ttk.Label(
-            frame_datos, text=estudiante.recomendacion,
-            wraplength=350, justify="left",
-        )
-        lbl_rec.grid(row=fila_rec, column=1, sticky="w", pady=1)
+            frame_recomendacion, text=estudiante.recomendacion,
+            wraplength=460, justify="left",
+        ).pack(anchor="w")
 
         # ── Botón cerrar ──
-        frame_btn = ttk.Frame(self.ventana, padding=10)
+        frame_btn = ttk.Frame(self.ventana, padding=(16, 0, 16, 16))
         frame_btn.pack(fill="x")
         ttk.Button(
-            frame_btn, text="Cerrar", command=self.ventana.destroy,
+            frame_btn, text="Cerrar", bootstyle="secondary", command=self.ventana.destroy,
         ).pack(side="right")
 
 
@@ -724,10 +754,10 @@ class VentanaConfiguracion:
         self._restablecer = restablecer_umbrales
         self._vp = ventana_principal
 
-        self.ventana = tk.Toplevel(parent)
-        self.ventana.title("Configurar Umbrales de Riesgo")
-        self.ventana.geometry("520x480")
-        self.ventana.resizable(False, False)
+        self.ventana = ttk.Toplevel(
+            title="Configurar Umbrales de Riesgo", size=(540, 500),
+            resizable=(False, False), transient=parent,
+        )
         self.ventana.grab_set()
 
         umbrales = cargar_umbrales()
@@ -735,44 +765,45 @@ class VentanaConfiguracion:
 
         ttk.Label(
             self.ventana,
-            text="Ajuste los umbrales de clasificacion de riesgo academico.\n"
-                 "Los valores se aplicaran al re-evaluar los estudiantes.",
+            text="Ajuste los umbrales de clasificación de riesgo académico.\n"
+                 "Los valores se aplicarán al re-evaluar los estudiantes.",
             justify="center",
             font=("Segoe UI", 9),
-            padding=10,
+            bootstyle="secondary",
+            padding=14,
         ).pack(fill="x")
 
-        frame = ttk.Frame(self.ventana, padding=10)
-        frame.pack(fill="both", expand=True)
+        frame = ttk.Labelframe(self.ventana, text="Umbrales", bootstyle="secondary", padding=14)
+        frame.pack(fill="both", expand=True, padx=14)
 
         for i, (clave, (etiqueta, ayuda)) in enumerate(self.ETIQUETAS.items()):
             ttk.Label(frame, text=etiqueta, font=("Segoe UI", 9, "bold")).grid(
-                row=i * 2, column=0, sticky="w", padx=(10, 5), pady=(8, 0),
+                row=i * 2, column=0, sticky="w", padx=(0, 5), pady=(8, 0),
             )
             var = tk.StringVar(value=str(umbrales.get(clave, 0)))
             self._vars[clave] = var
             ttk.Entry(frame, textvariable=var, width=10).grid(
                 row=i * 2, column=1, sticky="w", padx=(0, 10), pady=(8, 0),
             )
-            ttk.Label(frame, text=ayuda, foreground="gray", font=("Segoe UI", 8)).grid(
-                row=i * 2 + 1, column=0, columnspan=2, sticky="w", padx=(20, 0),
+            ttk.Label(frame, text=ayuda, bootstyle="secondary", font=("Segoe UI", 8)).grid(
+                row=i * 2 + 1, column=0, columnspan=2, sticky="w", padx=(10, 0),
             )
 
         # Botones
-        frame_btn = ttk.Frame(self.ventana, padding=10)
+        frame_btn = ttk.Frame(self.ventana, padding=14)
         frame_btn.pack(fill="x")
 
         ttk.Button(
-            frame_btn, text="Restablecer predeterminados",
+            frame_btn, text="Restablecer predeterminados", bootstyle="warning-outline",
             command=self._restablecer_valores,
         ).pack(side="left")
 
         ttk.Button(
-            frame_btn, text="Aplicar", command=self._aplicar,
+            frame_btn, text="Aplicar", bootstyle="primary", command=self._aplicar,
         ).pack(side="right", padx=(5, 0))
 
         ttk.Button(
-            frame_btn, text="Cancelar", command=self.ventana.destroy,
+            frame_btn, text="Cancelar", bootstyle="secondary", command=self.ventana.destroy,
         ).pack(side="right")
 
     def _restablecer_valores(self) -> None:
@@ -791,7 +822,7 @@ class VentanaConfiguracion:
                     raise ValueError(f"El valor de {clave} debe estar entre 0 y 100.")
                 nuevos[clave] = valor
         except ValueError as e:
-            messagebox.showerror("Valor invalido", str(e), parent=self.ventana)
+            Messagebox.show_error(str(e), "Valor inválido", parent=self.ventana)
             return
 
         self._guardar(nuevos)
@@ -804,9 +835,9 @@ class VentanaConfiguracion:
             self._vp._refrescar_tabla(self._vp.evaluador.obtener_datos_tabla())
             self._vp._actualizar_resumen(self._vp.evaluador.config_notas)
 
-        messagebox.showinfo(
-            "Configuracion aplicada",
+        Messagebox.show_info(
             "Umbrales actualizados y estudiantes re-evaluados.",
+            "Configuración aplicada",
             parent=self.ventana,
         )
         self.ventana.destroy()
@@ -825,10 +856,10 @@ class VentanaPesos:
         columnas = ventana_principal.evaluador.config_notas["columnas_nota"]
         pesos_actuales = ventana_principal.evaluador.config_notas["pesos"]
 
-        self.ventana = tk.Toplevel(parent)
-        self.ventana.title("Configurar Pesos de Notas")
-        self.ventana.geometry("480x420")
-        self.ventana.resizable(False, False)
+        self.ventana = ttk.Toplevel(
+            title="Configurar Pesos de Notas", size=(500, 440),
+            resizable=(False, False), transient=parent,
+        )
         self.ventana.grab_set()
 
         ttk.Label(
@@ -837,39 +868,39 @@ class VentanaPesos:
                  "La suma debe ser igual a 1.0 (100%).",
             justify="center",
             font=("Segoe UI", 9),
-            padding=10,
+            bootstyle="secondary",
+            padding=14,
         ).pack(fill="x")
 
         self._columnas = columnas
         self._vars: dict[str, tk.StringVar] = {}
         self._lbl_suma: ttk.Label | None = None
 
-        frame = ttk.Frame(self.ventana, padding=10)
-        frame.pack(fill="both", expand=True)
+        frame = ttk.Labelframe(self.ventana, text="Pesos por columna", bootstyle="secondary", padding=14)
+        frame.pack(fill="both", expand=True, padx=14)
 
         for i, col in enumerate(columnas):
             peso_actual = pesos_actuales[i] if i < len(pesos_actuales) else round(1.0 / len(columnas), 4)
             ttk.Label(frame, text=col + ":", font=("Segoe UI", 9, "bold")).grid(
-                row=i, column=0, sticky="w", padx=(10, 5), pady=6,
+                row=i, column=0, sticky="w", padx=(0, 5), pady=6,
             )
             var = tk.StringVar(value=str(peso_actual))
             self._vars[col] = var
             ttk.Entry(frame, textvariable=var, width=10).grid(
                 row=i, column=1, sticky="w", padx=(0, 10), pady=6,
             )
-            ttk.Label(frame, text=f"({peso_actual * 100:.1f}%)").grid(
+            ttk.Label(frame, text=f"({peso_actual * 100:.1f}%)", bootstyle="secondary").grid(
                 row=i, column=2, sticky="w", pady=6,
             )
 
         # Indicador de suma
-        sep_row = len(columnas)
         ttk.Separator(frame, orient="horizontal").grid(
-            row=sep_row, column=0, columnspan=3, sticky="ew", pady=8,
+            row=len(columnas), column=0, columnspan=3, sticky="ew", pady=8,
         )
         self._lbl_suma = ttk.Label(
             frame, text="Suma: —", font=("Segoe UI", 9, "bold"),
         )
-        self._lbl_suma.grid(row=sep_row + 1, column=0, columnspan=3, sticky="w", padx=(10, 0))
+        self._lbl_suma.grid(row=len(columnas) + 1, column=0, columnspan=3, sticky="w")
         self._actualizar_suma()
 
         # Vincular evento de cambio en cada variable
@@ -877,20 +908,20 @@ class VentanaPesos:
             var.trace_add("write", lambda *_: self._actualizar_suma())
 
         # Botones
-        frame_btn = ttk.Frame(self.ventana, padding=10)
+        frame_btn = ttk.Frame(self.ventana, padding=14)
         frame_btn.pack(fill="x")
 
         ttk.Button(
-            frame_btn, text="Iguales (1/n)",
+            frame_btn, text="Iguales (1/n)", bootstyle="info-outline",
             command=self._restablecer_iguales,
         ).pack(side="left")
 
         ttk.Button(
-            frame_btn, text="Aplicar", command=self._aplicar,
+            frame_btn, text="Aplicar", bootstyle="primary", command=self._aplicar,
         ).pack(side="right", padx=(5, 0))
 
         ttk.Button(
-            frame_btn, text="Cancelar", command=self.ventana.destroy,
+            frame_btn, text="Cancelar", bootstyle="secondary", command=self.ventana.destroy,
         ).pack(side="right")
 
     def _actualizar_suma(self) -> None:
@@ -905,11 +936,11 @@ class VentanaPesos:
                 break
 
         if not valido:
-            self._lbl_suma.config(text="Suma: valor invalido", foreground="gray")
+            self._lbl_suma.config(text="Suma: valor inválido", bootstyle="secondary")
         elif abs(total - 1.0) < 0.001:
-            self._lbl_suma.config(text=f"Suma: {total:.4f}  OK", foreground="#27ae60")
+            self._lbl_suma.config(text=f"Suma: {total:.4f}  OK", bootstyle="success")
         else:
-            self._lbl_suma.config(text=f"Suma: {total:.4f}  (debe ser 1.0)", foreground="#e74c3c")
+            self._lbl_suma.config(text=f"Suma: {total:.4f}  (debe ser 1.0)", bootstyle="danger")
 
     def _restablecer_iguales(self) -> None:
         """Restablece todos los pesos a 1/n."""
@@ -931,14 +962,14 @@ class VentanaPesos:
                     raise ValueError(f"El peso de '{col}' debe estar entre 0 y 1.")
                 pesos_nuevos[col] = valor
         except ValueError as e:
-            messagebox.showerror("Valor invalido", str(e), parent=self.ventana)
+            Messagebox.show_error(str(e), "Valor inválido", parent=self.ventana)
             return
 
         total = sum(pesos_nuevos.values())
         if abs(total - 1.0) > 0.01:
-            messagebox.showwarning(
-                "Pesos no suman 1.0",
+            Messagebox.show_warning(
                 f"La suma actual es {total:.4f}. Debe ser 1.0 (100%).",
+                "Pesos no suman 1.0",
                 parent=self.ventana,
             )
             return
@@ -952,9 +983,9 @@ class VentanaPesos:
         self._vp._refrescar_tabla(self._vp.evaluador.obtener_datos_tabla())
         self._vp._actualizar_resumen(self._vp.evaluador.config_notas)
 
-        messagebox.showinfo(
-            "Pesos actualizados",
+        Messagebox.show_info(
             "Pesos guardados y estudiantes re-evaluados.",
+            "Pesos actualizados",
             parent=self.ventana,
         )
         self.ventana.destroy()

@@ -30,12 +30,12 @@ Autor: [Tu nombre aquí]
 ==================================================================
 """
 
-import tkinter as tk
+import ttkbootstrap as ttk
 from src.gui import VentanaPrincipal
 
 
 def main() -> None:
-    root = tk.Tk()
+    root = ttk.Window(themename="flatly")
     app = VentanaPrincipal(root)
     root.mainloop()
 

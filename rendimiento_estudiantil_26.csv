@@ -1,51 +1,61 @@
-﻿id_estudiante,nombre,curso,ciclo,asistencia_pct,horas_estudio_semanal,tareas_entregadas_pct,participacion,nota_ep1,nota_ep2,nota_ep3,nota_ep4,nota_final
-1001,Ana Torres,Matemática,1,95,12,100,10,16,17,18,17,17
-1002,Luis Rojas,Matemática,1,88,8,90,6,14,15,13,15,14
-1003,María Gómez,Matemática,1,92,10,95,9,17,16,18,17,17
-1004,Carlos Díaz,Matemática,1,80,6,85,3,12,13,12,14,13
-1005,Sofía Herrera,Matemática,1,98,14,100,10,19,18,19,20,19
-1006,Diego Vargas,Matemática,1,85,7,88,6,13,14,15,14,14
-1007,Lucía Paredes,Matemática,1,90,9,92,8,15,16,16,17,16
-1008,Jorge Salas,Matemática,1,76,5,80,2,11,12,11,13,12
-1009,Valeria Castro,Matemática,1,94,11,98,9,18,17,18,18,18
-1010,Miguel León,Matemática,1,82,6,87,5,13,12,14,13,13
-1011,Paula Mendoza,Programación,2,96,15,100,10,19,18,19,20,19
-1012,Andrés Ruiz,Programación,2,89,10,93,6,15,16,15,16,16
-1013,Camila Flores,Programación,2,91,11,95,9,17,17,18,18,18
-1014,Ricardo Peña,Programación,2,78,5,82,3,11,12,13,12,12
-1015,Daniela Ortiz,Programación,2,97,16,100,10,20,19,20,19,20
-1016,Fernando Silva,Programación,2,84,7,86,6,13,14,13,15,14
-1017,Gabriela Núñez,Programación,2,93,12,97,9,18,18,17,19,18
-1018,Hugo Ramos,Programación,2,81,6,84,4,12,13,12,13,13
-1019,Elena Cueva,Programación,2,95,13,99,10,18,19,19,18,19
-1020,Sergio Molina,Programación,2,87,8,90,7,14,15,15,16,15
-1021,Natalia Cruz,Física,3,94,11,98,9,18,17,18,19,18
-1022,Kevin Soto,Física,3,83,7,87,6,13,14,13,14,14
-1023,Patricia Vega,Física,3,91,10,94,8,17,18,17,18,18
-1024,Raúl Navarro,Física,3,77,5,80,2,11,12,12,11,12
-1025,Isabel Campos,Física,3,99,15,100,10,20,19,20,20,20
-1026,Óscar Gil,Física,3,86,8,89,6,14,15,14,15,15
-1027,Claudia Lozano,Física,3,92,10,96,9,17,18,18,17,18
-1028,Pedro Acosta,Física,3,79,6,83,3,12,11,13,12,12
-1029,Rosa Benites,Física,3,95,12,99,10,18,19,18,19,19
-1030,Iván Cabrera,Física,3,84,7,88,6,14,13,15,14,14
-1031,José Miranda,Base de Datos,4,93,12,97,9,18,18,19,18,18
-1032,Andrea Ponce,Base de Datos,4,88,9,91,7,15,15,16,15,15
-1033,Bruno Castillo,Base de Datos,4,90,10,94,8,16,17,17,18,17
-1034,Cynthia Ríos,Base de Datos,4,81,6,85,3,12,13,13,14,13
-1035,Marco Valdez,Base de Datos,4,97,15,100,10,20,19,20,20,20
-1036,Karen Chávez,Base de Datos,4,85,8,89,6,14,14,15,15,15
-1037,Renzo Espinoza,Base de Datos,4,92,11,96,9,17,18,18,17,18
-1038,Silvia Aguirre,Base de Datos,4,80,5,84,4,12,12,13,13,13
-1039,Víctor Cárdenas,Base de Datos,4,96,13,99,10,19,18,19,19,19
-1040,Yessica Luna,Base de Datos,4,87,8,90,7,15,14,15,16,15
-1041,Alonso Fuentes,Matemática,2,91,10,95,8,17,16,17,18,17
-1042,Beatriz Reyes,Programación,3,89,9,92,7,15,16,16,15,16
-1043,César Medina,Física,1,82,6,86,4,13,12,14,13,13
-1044,Diana Salazar,Base de Datos,2,94,12,98,9,18,18,19,18,18
-1045,Erick Quispe,Matemática,3,78,5,81,3,11,12,12,13,12
-1046,Fátima Villanueva,Programación,1,96,14,100,10,19,19,18,20,19
-1047,Gustavo Rivas,Física,2,88,8,90,7,15,14,15,16,15
-1048,Helena Carrillo,Base de Datos,3,90,10,93,8,17,17,18,17,17
-1049,Javier Alarcón,Matemática,4,84,7,88,6,14,13,14,15,14
-1050,Karina Delgado,Programación,4,98,16,100,10,20,20,19,20,20
+id_estudiante,nombre,curso,ciclo,asistencia_pct,horas_estudio_semanal,tareas_entregadas_pct,participacion,nota_ep1,nota_ep2,nota_final
+E0001,Iker Vega,Redes de Computadoras,2026-1,74.2,2.5,83.5,3,9.7,12.9,12.0
+E0002,Franco Paredes,Redes de Computadoras,2026-1,99.5,5.3,98.8,3,14.9,15.3,16.9
+E0003,Estefanía Medina,Redes de Computadoras,2026-1,82.6,14.7,85.9,5,17.2,17.1,17.9
+E0004,Hugo Ponce,Lenguajes de Programación,2026-1,97.3,9.2,96.9,3,14.3,19.7,15.2
+E0005,Damián Paredes,Estructuras de Datos,2026-1,66.0,2.3,71.3,2,9.7,10.6,12.5
+E0006,Elías Mamani,Estructuras de Datos,2026-1,71.9,2.2,67.6,3,12.4,9.7,10.0
+E0007,Martina Rojas,Lenguajes de Programación,2026-1,,5.0,78.3,3,11.2,11.8,11.5
+E0008,Emilia Quispe,Estructuras de Datos,2026-1,63.2,2.8,47.5,1,5.5,,0.3
+E0009,Joaquín Zapata,Base de Datos,2026-1,33.1,2.7,22.7,1,8.4,8.0,8.7
+E0010,Aarón Palomino,Base de Datos,2026-1,87.8,11.3,94.4,3,14.6,19.8,16.6
+E0011,Emilia Alva,Base de Datos,2026-1,78.7,4.8,70.5,2,13.2,14.1,9.7
+E0012,Franco Cruz,Matemática Discreta,2026-1,34.6,1.4,46.3,1,0.1,8.7,6.8
+E0013,Antonella Vega,Matemática Discreta,2026-1,53.0,0.1,44.9,1,7.5,,9.4
+E0014,Cristian Huamán,Base de Datos,2026-1,85.7,6.7,81.2,3,15.8,16.5,18.0
+E0015,Josefina Soto,Lenguajes de Programación,2026-1,95.7,12.9,98.1,4,,17.5,16.8
+E0016,Estefanía Torres,Matemática Discreta,2026-1,96.4,6.9,85.9,3,17.4,17.0,16.5
+E0017,Rubén Cruz,Redes de Computadoras,2026-1,66.6,2.1,84.4,2,13.7,13.8,13.2
+E0018,Rubén Mamani,Redes de Computadoras,2026-1,75.9,4.8,77.9,3,10.1,11.5,14.2
+E0019,Antonella Paredes,Lenguajes de Programación,2026-1,86.7,6.0,96.2,5,14.4,18.9,15.3
+E0020,Nicolás Zapata,Estructuras de Datos,2026-1,53.0,1.7,59.7,2,9.2,5.6,5.9
+E0021,Vicente Zapata,Redes de Computadoras,2026-1,90.0,9.4,84.1,3,15.7,17.6,17.4
+E0022,Aarón Vega,Matemática Discreta,2026-1,55.0,1.9,42.8,1,1.7,3.3,3.9
+E0023,Manuel Alva,Redes de Computadoras,2026-1,76.6,5.8,73.7,2,12.3,11.0,12.7
+E0024,Abigail Alva,Matemática Discreta,2026-1,84.6,11.5,99.0,5,16.2,19.4,17.0
+E0025,Damián Quispe,Lenguajes de Programación,2026-1,95.7,12.1,94.9,3,16.2,18.4,16.1
+E0026,Josefina Rojas,Estructuras de Datos,2026-1,53.5,1.5,36.4,1,7.2,7.0,0.1
+E0027,Noelia Soto,Base de Datos,2026-1,26.4,1.6,52.4,2,3.7,0.5,2.9
+E0028,Vicente Cabrera,Estructuras de Datos,2026-1,40.3,0.5,45.4,1,7.5,3.5,5.4
+E0029,Cristian Soto,Estructuras de Datos,2026-1,36.3,2.7,50.7,2,6.1,4.6,2.7
+E0030,Manuel Soto,Lenguajes de Programación,2026-1,78.8,4.5,63.2,3,10.9,11.9,11.3
+E0031,Josefina Torres,Lenguajes de Programación,2026-1,74.8,5.2,60.5,2,12.5,11.9,10.5
+E0032,Julio Rojas,Redes de Computadoras,2026-1,78.9,5.8,76.0,3,13.6,10.7,11.0
+E0033,Brisa Ponce,Matemática Discreta,2026-1,81.3,5.3,56.7,3,11.2,11.3,11.5
+E0034,Martina Mamani,Lenguajes de Programación,2026-1,92.3,5.8,90.2,4,14.2,17.8,14.7
+E0035,Zoe Medina,Lenguajes de Programación,2026-1,81.9,3.8,65.1,3,12.8,11.0,10.9
+E0036,Valentina Medina,Matemática Discreta,2026-1,96.4,13.8,81.8,3,18.3,19.1,16.3
+E0037,Joaquín Paredes,Matemática Discreta,2026-1,86.0,10.8,90.9,3,16.9,16.8,18.7
+E0038,Josefina Cárdenas,Matemática Discreta,2026-1,24.6,0.9,,1,5.7,3.2,9.4
+E0039,Josefina Cárdenas,Matemática Discreta,2026-1,76.5,3.8,84.4,2,10.5,10.5,10.9
+E0040,Abigail Huamán,Matemática Discreta,2026-1,65.0,2.2,67.9,2,10.8,13.4,11.0
+E0041,Estefanía Zapata,Redes de Computadoras,2026-1,71.1,5.8,65.6,3,11.9,11.8,10.1
+E0042,Melany Palomino,Base de Datos,2026-1,71.2,4.6,58.8,2,12.5,12.6,9.8
+E0043,Abigail Alva,Redes de Computadoras,2026-1,46.3,2.1,43.7,2,5.9,0.8,1.3
+E0044,Abigail Cabrera,Redes de Computadoras,2026-1,68.4,2.7,65.3,2,13.5,11.9,12.0
+E0045,Hugo Cabrera,Lenguajes de Programación,2026-1,78.3,2.2,66.4,2,12.2,13.4,9.7
+E0046,Zoe Zapata,Redes de Computadoras,2026-1,78.4,4.4,63.6,3,11.2,9.6,12.5
+E0047,Hugo Cabrera,Lenguajes de Programación,2026-1,84.0,9.4,90.4,4,15.3,16.1,18.5
+E0048,Martina Alva,Matemática Discreta,2026-1,93.1,6.3,98.0,4,17.9,17.4,18.3
+E0049,Milagros Huamán,Redes de Computadoras,2026-1,53.2,0.1,59.1,2,5.3,,6.2
+E0050,Noelia Soto,Estructuras de Datos,2026-1,73.2,3.1,63.5,2,13.8,10.2,12.2
+E0051,Josefina Cárdenas,Base de Datos,2026-1,68.3,5.8,58.0,2,13.9,13.9,11.6
+E0052,Julio Alva,Base de Datos,2026-1,51.8,1.6,41.1,1,3.5,1.5,5.2
+E0053,Hugo Rivas,Redes de Computadoras,2026-1,89.4,13.9,87.5,5,16.4,19.4,15.8
+E0054,Hugo Palomino,Matemática Discreta,2026-1,71.7,5.0,69.0,2,11.7,12.6,10.5
+E0055,Abigail Zapata,Redes de Computadoras,2026-1,81.7,4.8,79.0,3,11.5,13.5,12.6
+E0056,Estefanía Rojas,Lenguajes de Programación,2026-1,73.3,5.9,59.8,2,11.2,9.6,12.7
+E0057,Noelia Palomino,Lenguajes de Programación,2026-1,98.1,9.5,86.6,4,19.8,15.9,18.9
+E0058,Cristian Medina,Redes de Computadoras,2026-1,70.2,5.0,64.4,3,12.9,11.7,11.5
+E0059,Elías Alva,Matemática Discreta,2026-1,75.5,4.3,66.8,3,14.0,11.7,12.7
+E0060,Julio Cruz,Matemática Discreta,2026-1,71.8,3.9,78.2,2,10.5,13.8,12.7

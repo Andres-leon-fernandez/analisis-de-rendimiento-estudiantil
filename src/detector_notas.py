@@ -1,13 +1,14 @@
 """
 ==================================================================
- DETECTOR AUTOMÁTICO DE SISTEMA DE NOTAS
- Identifica columnas de evaluación académica basándose en
- prefijos de nombre y asigna pesos iguales.
+ DETECTOR AUTOMATICO DE SISTEMA DE NOTAS
+ Identifica columnas de evaluacion academica basandose en
+ prefijos de nombre y asigna pesos (iguales o guardados).
 ==================================================================
 """
 
 import pandas as pd
 import numpy as np
+from src.config_manager import cargar_pesos
 
 # Prefijos que identifican columnas de nota/evaluación
 PREFIJOS_NOTA = [
@@ -57,10 +58,14 @@ def detectar_columnas_notas(df: pd.DataFrame) -> dict:
         )
 
     n = len(columnas_nota)
-    pesos = [round(1.0 / n, 4) for _ in range(n)]
 
-    # Ajustar el último peso para que sume exactamente 1.0
-    pesos[-1] = round(1.0 - sum(pesos[:-1]), 4)
+    # Intentar cargar pesos guardados; si no existen, asignar iguales
+    pesos_guardados = cargar_pesos()
+    if all(col in pesos_guardados for col in columnas_nota):
+        pesos = [pesos_guardados[col] for col in columnas_nota]
+    else:
+        pesos = [round(1.0 / n, 4) for _ in range(n)]
+        pesos[-1] = round(1.0 - sum(pesos[:-1]), 4)
 
     tiene_cursos = "curso" in [c.lower().strip() for c in columnas]
     curso_col = "curso" if tiene_cursos else None

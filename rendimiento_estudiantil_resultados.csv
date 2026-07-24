@@ -1,221 +1,221 @@
 ﻿id_estudiante,nombre,curso,promedio,asistencia_pct,indice_compromiso,nivel_riesgo,recomendacion
-E0001,María Aguilar,Matemática Discreta,14.47,93.8,80.1,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0002,Ricardo López,Redes de Computadoras,11.33,89.2,72.27,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0003,Iván Flores,Lenguajes de Programación,14.97,68.3,71.67,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0004,Tomás Vargas,Base de Datos,10.2,74.3,62.03,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0005,Bruno Reyes,Estructuras de Datos,13.3,78.8,81.03,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0006,Alejandra Ramírez,Matemática Discreta,13.57,62.6,67.1,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0007,Gabriela Rojas,Lenguajes de Programación,11.33,78.7,79.3,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0008,Gabriela Ortiz,Base de Datos,15.4,76.8,77.23,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0009,Bruno Herrera,Matemática Discreta,10.57,70.5,71.13,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0010,Ricardo Delgado,Lenguajes de Programación,12.83,49.8,48.53,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0011,Ximena Ramírez,Lenguajes de Programación,9.93,81.7,75.17,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0012,María Salazar,Estructuras de Datos,15.17,94.4,77.92,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0013,Lucía Pérez,Lenguajes de Programación,10.03,57.5,57.23,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0014,Alonso Rodríguez,Lenguajes de Programación,17.93,100.0,73.7,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0015,Camila García,Base de Datos,15.07,74.7,63.6,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0016,Alejandra Chávez,Redes de Computadoras,12.63,51.6,57.2,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0017,Renata Mendoza,Redes de Computadoras,12.87,73.8,50.07,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0018,Jorge Pérez,Estructuras de Datos,18.83,90.7,90.23,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0019,Ana Pérez,Lenguajes de Programación,14.17,68.6,56.87,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0020,Alejandra Ortiz,Lenguajes de Programación,13.43,90.2,76.9,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0021,Ana Herrera,Lenguajes de Programación,16.13,69.5,81.6,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0022,Ximena Rojas,Estructuras de Datos,16.97,63.8,82.87,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0023,Mateo Aguilar,Redes de Computadoras,12.87,78.3,71.9,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0024,Ana Delgado,Redes de Computadoras,16.27,85.9,72.57,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0025,Diego Reyes,Base de Datos,9.1,81.9,71.43,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0026,Andrés Reyes,Lenguajes de Programación,14.2,91.9,80.3,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0027,Valeria Sánchez,Matemática Discreta,15.3,69.7,83.23,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0028,Alonso Sánchez,Redes de Computadoras,10.73,73.4,68.4,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0029,Bruno Flores,Matemática Discreta,10.4,73.5,86.93,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0030,Mateo López,Matemática Discreta,15.13,87.3,89.1,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0031,Gabriela Mendoza,Matemática Discreta,16.17,79.9,68.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0032,Renata Mendoza,Redes de Computadoras,10.13,60.3,80.1,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0033,Luis Rodríguez,Estructuras de Datos,11.6,82.3,73.88,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0034,Renata Pérez,Redes de Computadoras,14.43,61.9,77.4,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0035,Alejandra Aguilar,Matemática Discreta,8.7,64.6,67.8,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0036,Camila Ortiz,Redes de Computadoras,17.17,87.2,89.07,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0037,Carlos Pérez,Estructuras de Datos,8.27,71.7,48.0,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0038,Alonso Herrera,Matemática Discreta,12.07,33.2,44.93,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0039,Fabián García,Base de Datos,11.3,75.6,69.43,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0040,Jorge Delgado,Redes de Computadoras,11.23,32.2,50.53,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0041,Carlos Pérez,Matemática Discreta,15.7,89.6,77.17,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0042,Sebastián Herrera,Matemática Discreta,15.37,66.4,55.87,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0043,Alonso Castillo,Estructuras de Datos,10.1,77.1,78.47,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0044,Bruno López,Lenguajes de Programación,13.67,77.9,79.3,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0045,Paula Chávez,Redes de Computadoras,11.4,47.6,48.07,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0046,Paula Flores,Estructuras de Datos,15.9,67.5,64.5,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0047,Isabela Mendoza,Redes de Computadoras,15.13,82.9,67.03,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0048,Ximena Reyes,Lenguajes de Programación,10.8,77.6,63.1,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0049,Iván López,Base de Datos,7.37,30.0,56.67,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0050,Renata Ortiz,Matemática Discreta,15.1,83.6,70.97,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0051,Alejandra Delgado,Matemática Discreta,19.37,83.7,85.63,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0052,Sofía Ortiz,Lenguajes de Programación,6.3,67.0,57.23,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0053,Gabriela Chávez,Estructuras de Datos,15.47,75.8,81.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0054,Lucía Flores,Estructuras de Datos,12.07,62.9,53.93,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0055,Ana Torres,Base de Datos,12.5,65.6,55.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0056,Diego Herrera,Redes de Computadoras,13.43,100.0,78.7,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0057,Sebastián Herrera,Redes de Computadoras,14.0,69.5,61.5,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0058,Ricardo Delgado,Estructuras de Datos,16.53,86.0,80.07,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0059,Ricardo Reyes,Base de Datos,9.57,64.6,51.53,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0060,Luis Flores,Lenguajes de Programación,9.9,86.3,73.97,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0061,Renata Salazar,Base de Datos,5.57,70.2,48.27,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0062,Jorge Salazar,Lenguajes de Programación,12.97,73.94999999999999,84.65,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0063,Luis Flores,Estructuras de Datos,18.7,91.4,89.87,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0064,Emilio Vargas,Estructuras de Datos,3.9,57.9,59.08,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0065,Tomás Herrera,Base de Datos,19.93,69.2,81.3,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0066,Alonso Chávez,Estructuras de Datos,17.1,96.3,78.27,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0067,Bruno Mendoza,Redes de Computadoras,13.37,57.5,51.13,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0068,Paula García,Lenguajes de Programación,12.3,64.0,47.03,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0069,Camila Pérez,Estructuras de Datos,12.47,72.4,69.63,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0070,Fabián Rojas,Base de Datos,6.37,49.0,60.43,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0071,Renata García,Base de Datos,8.83,79.7,71.33,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0072,Sofía Salazar,Redes de Computadoras,10.53,87.2,78.57,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0073,Tomás Chávez,Redes de Computadoras,19.97,75.3,84.67,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0074,Tomás Gutiérrez,Lenguajes de Programación,14.73,58.2,54.9,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0075,Jorge Pérez,Matemática Discreta,11.7,68.8,53.5,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0076,Sofía Rojas,Redes de Computadoras,9.67,73.0,63.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0077,Diego García,Lenguajes de Programación,18.27,97.9,77.9,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0078,Alonso Ramírez,Matemática Discreta,10.43,58.7,48.57,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0079,Mateo Flores,Lenguajes de Programación,7.73,64.1,68.03,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0080,Lucía Vargas,Estructuras de Datos,14.33,55.1,71.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0081,Ana Sánchez,Estructuras de Datos,15.03,94.5,84.83,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0082,Ximena Flores,Estructuras de Datos,16.8,80.3,86.77,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0083,Luis Torres,Lenguajes de Programación,11.67,47.9,53.77,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0084,Isabela Castillo,Base de Datos,8.9,65.7,56.3,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0085,Andrés Gutiérrez,Matemática Discreta,16.23,71.1,74.1,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0086,Emilio Herrera,Matemática Discreta,9.07,64.5,71.8,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0087,Fabián Vargas,Lenguajes de Programación,8.73,92.6,84.2,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0088,Ximena Salazar,Estructuras de Datos,15.53,73.1,91.03,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0089,Luis Ortiz,Lenguajes de Programación,11.57,67.3,66.73,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0090,Natalia Rodríguez,Estructuras de Datos,20.0,95.2,83.7,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0091,Emilio Chávez,Lenguajes de Programación,4.53,73.6,64.0,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0092,Ricardo Salazar,Base de Datos,12.77,84.3,74.77,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0093,Camila Chávez,Matemática Discreta,10.6,73.94999999999999,65.62,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0094,Ana Chávez,Base de Datos,11.63,77.8,62.73,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0095,Tomás Reyes,Estructuras de Datos,14.97,64.9,62.13,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0096,Luis Gutiérrez,Estructuras de Datos,13.47,84.1,87.53,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0097,Alejandra Rodríguez,Base de Datos,9.1,80.3,72.93,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0098,Lucía López,Lenguajes de Programación,12.67,68.2,70.37,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0099,Alonso Chávez,Matemática Discreta,14.8,87.5,70.17,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0100,Jorge Flores,Estructuras de Datos,14.4,91.2,90.4,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0101,Isabela Ortiz,Base de Datos,12.0,64.5,83.2,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0102,Fabián Torres,Base de Datos,12.47,77.6,78.1,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0103,Sofía Reyes,Base de Datos,15.07,59.7,51.4,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0104,Sofía Ramírez,Redes de Computadoras,11.8,75.6,72.83,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0105,Sofía Vargas,Estructuras de Datos,18.7,84.6,78.27,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0106,Gabriela Ramírez,Estructuras de Datos,12.2,88.3,78.93,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0107,Jorge Herrera,Matemática Discreta,9.4,60.6,64.2,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0108,Alejandra Sánchez,Lenguajes de Programación,9.43,73.94999999999999,74.62,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0109,Gabriela Mendoza,Estructuras de Datos,15.97,86.8,86.27,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0110,Alejandra Vargas,Base de Datos,15.63,69.7,64.17,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0111,Fabián Pérez,Redes de Computadoras,10.53,83.3,67.77,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0112,Mateo Ramírez,Matemática Discreta,8.3,54.8,64.63,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0113,Camila Vargas,Base de Datos,6.37,49.9,54.2,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0114,Ximena Flores,Lenguajes de Programación,14.47,57.4,58.53,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0115,Fernanda Sánchez,Estructuras de Datos,8.73,51.6,41.97,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0116,Alonso López,Base de Datos,8.2,57.3,65.37,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0117,Ximena Pérez,Lenguajes de Programación,8.93,38.2,46.5,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0118,Carlos Rodríguez,Base de Datos,8.6,75.9,54.33,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0119,Daniela Pérez,Matemática Discreta,13.8,99.8,89.9,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0120,Andrés Reyes,Redes de Computadoras,13.37,54.6,64.87,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0121,María Flores,Estructuras de Datos,11.87,82.2,70.1,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0122,María López,Estructuras de Datos,13.87,99.4,86.17,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0123,Emilio Rojas,Lenguajes de Programación,17.17,60.9,80.3,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0124,Ana Gutiérrez,Estructuras de Datos,14.0,71.4,70.25,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0125,Emilio Rojas,Redes de Computadoras,4.57,61.5,47.03,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0126,Natalia Pérez,Lenguajes de Programación,14.93,74.9,89.93,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0127,Alonso López,Matemática Discreta,8.43,56.0,70.1,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0128,Lucía López,Lenguajes de Programación,17.57,87.0,89.0,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0129,Sofía Vargas,Base de Datos,14.4,57.3,59.33,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0130,Luis Aguilar,Redes de Computadoras,13.37,100.0,79.07,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0131,Diego Delgado,Base de Datos,14.63,75.7,84.2,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0132,Andrés Flores,Redes de Computadoras,15.9,79.1,73.87,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0133,Fabián Flores,Base de Datos,12.57,90.9,72.23,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0134,Fernanda Gutiérrez,Base de Datos,19.7,100.0,86.67,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0135,Sofía López,Lenguajes de Programación,18.97,85.4,78.37,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0136,Alonso Pérez,Lenguajes de Programación,19.17,100.0,99.43,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0137,Diego Salazar,Lenguajes de Programación,12.67,92.1,78.47,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0138,Ricardo Ortiz,Estructuras de Datos,3.23,30.5,32.3,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0139,Alonso Delgado,Lenguajes de Programación,13.57,64.8,70.0,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0140,Daniela Aguilar,Matemática Discreta,18.6,97.1,86.83,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0141,Daniela Castillo,Estructuras de Datos,8.47,58.6,48.1,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0142,Valeria Reyes,Lenguajes de Programación,18.4,97.5,97.63,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0143,Alejandra Pérez,Base de Datos,9.0,68.6,55.87,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0144,Camila Sánchez,Estructuras de Datos,13.23,61.8,60.73,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0145,Diego Ramírez,Base de Datos,12.2,91.2,76.8,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0146,Carlos Chávez,Redes de Computadoras,8.6,44.7,45.43,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0147,Daniela Vargas,Estructuras de Datos,11.63,70.8,81.43,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0148,Alonso López,Base de Datos,11.4,76.1,58.13,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0149,Ximena Rodríguez,Matemática Discreta,13.8,54.8,60.3,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0150,Isabela Ramírez,Matemática Discreta,11.33,52.2,48.53,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0151,Renata Aguilar,Estructuras de Datos,11.33,45.3,49.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0152,Miguel Aguilar,Lenguajes de Programación,10.3,54.4,62.53,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0153,Ximena Salazar,Lenguajes de Programación,14.6,83.4,74.47,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0154,Tomás López,Lenguajes de Programación,17.3,94.7,87.43,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0155,Ana Ortiz,Estructuras de Datos,20.0,82.8,91.57,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0156,Paula Chávez,Redes de Computadoras,5.57,70.6,56.0,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0157,Sofía Ortiz,Lenguajes de Programación,9.3,84.8,76.83,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0158,Iván Salazar,Estructuras de Datos,16.27,84.6,88.8,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0159,Fernanda Aguilar,Estructuras de Datos,19.53,84.1,71.2,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0160,Isabela Chávez,Redes de Computadoras,14.77,69.4,62.57,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0161,Camila Salazar,Redes de Computadoras,11.17,54.2,67.97,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0162,Alejandra Reyes,Base de Datos,13.73,77.3,67.87,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0163,Bruno Sánchez,Estructuras de Datos,15.73,57.8,44.63,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0164,Ana García,Redes de Computadoras,11.97,41.9,51.87,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0165,Camila Sánchez,Lenguajes de Programación,7.23,53.1,59.6,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0166,María Vargas,Redes de Computadoras,10.67,73.94999999999999,75.32,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0167,Paula López,Matemática Discreta,15.07,64.3,65.57,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0168,Jorge Salazar,Redes de Computadoras,16.1,61.6,75.27,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0169,Renata Salazar,Estructuras de Datos,9.57,51.8,55.03,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0170,Lucía Delgado,Estructuras de Datos,15.93,100.0,91.13,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0171,Lucía Castillo,Estructuras de Datos,16.87,96.4,79.33,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0172,Emilio Flores,Matemática Discreta,7.53,52.6,45.2,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0173,Andrés Vargas,Base de Datos,2.73,61.5,55.57,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0174,Ximena Salazar,Base de Datos,8.2,73.94999999999999,65.85,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0175,Lucía Reyes,Base de Datos,15.53,100.0,87.83,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0176,Andrés López,Estructuras de Datos,12.73,74.1,67.43,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0177,Luis Sánchez,Lenguajes de Programación,9.9,59.2,53.53,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0178,Ximena Reyes,Lenguajes de Programación,19.93,90.2,82.8,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0179,Gabriela López,Estructuras de Datos,8.33,74.1,60.9,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0180,Emilio Ortiz,Estructuras de Datos,15.57,69.7,83.23,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0181,Renata Aguilar,Estructuras de Datos,13.17,92.7,64.02,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0182,Alejandra Rodríguez,Lenguajes de Programación,11.77,57.6,59.33,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0183,Iván Delgado,Lenguajes de Programación,3.73,73.3,61.1,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0184,Emilio Salazar,Matemática Discreta,7.27,76.4,68.2,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0185,Tomás López,Base de Datos,10.8,60.6,65.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0186,Valeria Castillo,Redes de Computadoras,11.93,61.2,52.1,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0187,Ximena Aguilar,Lenguajes de Programación,5.47,49.4,46.6,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0188,Camila Salazar,Estructuras de Datos,12.43,69.5,71.53,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0189,Camila Ramírez,Estructuras de Datos,19.83,75.9,80.37,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0190,Ana García,Base de Datos,10.43,63.0,61.33,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0191,Andrés García,Redes de Computadoras,18.73,80.6,73.3,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0192,Renata Mendoza,Lenguajes de Programación,11.97,74.4,62.17,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0193,Ana Pérez,Base de Datos,18.13,92.8,91.87,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0194,Luis Gutiérrez,Estructuras de Datos,9.53,44.0,38.1,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0195,Diego García,Estructuras de Datos,18.13,73.94999999999999,74.98,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0196,Miguel Salazar,Base de Datos,14.4,73.0,55.53,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0197,Lucía Herrera,Base de Datos,12.3,74.9,63.5,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0198,Carlos Reyes,Estructuras de Datos,11.3,84.8,77.13,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0199,Alejandra García,Base de Datos,10.8,61.7,39.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0200,Camila Rojas,Redes de Computadoras,16.57,81.6,79.47,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0201,Carlos Aguilar,Matemática Discreta,11.0,74.1,84.7,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0202,Alejandra Herrera,Matemática Discreta,18.83,76.4,90.27,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0203,Fabián Vargas,Lenguajes de Programación,11.63,78.7,75.97,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0204,Natalia Aguilar,Base de Datos,10.53,74.8,84.03,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0205,Emilio Mendoza,Estructuras de Datos,13.77,93.3,90.3,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0206,Diego López,Redes de Computadoras,10.27,72.9,67.0,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0207,Carlos Rojas,Base de Datos,13.93,61.3,66.88,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0208,Iván Salazar,Redes de Computadoras,13.13,58.6,49.73,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0209,Alonso García,Lenguajes de Programación,18.7,99.0,80.3,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0210,Mateo Gutiérrez,Estructuras de Datos,10.23,71.1,79.17,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0211,Jorge Torres,Matemática Discreta,11.93,74.3,76.37,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0212,Gabriela Delgado,Matemática Discreta,14.47,100.0,84.93,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0213,Alonso Chávez,Redes de Computadoras,16.43,66.3,70.17,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
-E0214,Renata García,Lenguajes de Programación,9.97,81.1,58.37,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0215,Sofía Herrera,Estructuras de Datos,15.53,90.3,71.37,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0216,Renata Sánchez,Estructuras de Datos,8.63,63.6,49.83,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0217,Miguel Flores,Lenguajes de Programación,13.37,89.2,69.93,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0218,Diego Herrera,Lenguajes de Programación,9.9,39.5,66.5,Alto,Requiere tutoría académica inmediata y seguimiento semanal.
-E0219,Andrés Pérez,Matemática Discreta,16.2,87.0,74.83,Bajo,Mantener el desempeño actual; sin acciones urgentes.
-E0220,Paula García,Matemática Discreta,12.27,100.0,79.93,Medio,Se recomienda reforzar hábitos de estudio y asistencia.
+E0001,María Aguilar,Matemática Discreta,14.9,93.8,80.1,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0002,Ricardo López,Redes de Computadoras,11.23,89.2,72.27,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0003,Iván Flores,Lenguajes de Programación,14.57,68.3,71.67,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0004,Tomás Vargas,Base de Datos,10.25,74.3,62.03,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0005,Bruno Reyes,Estructuras de Datos,12.8,78.8,81.03,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0006,Alejandra Ramírez,Matemática Discreta,13.93,62.6,67.1,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0007,Gabriela Rojas,Lenguajes de Programación,11.8,78.7,79.3,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0008,Gabriela Ortiz,Base de Datos,15.47,76.8,77.23,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0009,Bruno Herrera,Matemática Discreta,10.18,70.5,71.13,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0010,Ricardo Delgado,Lenguajes de Programación,12.58,49.8,48.53,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0011,Ximena Ramírez,Lenguajes de Programación,10.0,81.7,75.17,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0012,María Salazar,Estructuras de Datos,15.05,94.4,77.92,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0013,Lucía Pérez,Lenguajes de Programación,10.5,57.5,57.23,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0014,Alonso Rodríguez,Lenguajes de Programación,17.98,100.0,73.7,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0015,Camila García,Base de Datos,15.18,74.7,63.6,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0016,Alejandra Chávez,Redes de Computadoras,12.8,51.6,57.2,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0017,Renata Mendoza,Redes de Computadoras,12.68,73.8,50.07,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0018,Jorge Pérez,Estructuras de Datos,18.62,90.7,90.23,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0019,Ana Pérez,Lenguajes de Programación,14.23,68.6,56.87,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0020,Alejandra Ortiz,Lenguajes de Programación,13.65,90.2,76.9,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0021,Ana Herrera,Lenguajes de Programación,16.23,69.5,81.6,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0022,Ximena Rojas,Estructuras de Datos,16.73,63.8,82.87,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0023,Mateo Aguilar,Redes de Computadoras,13.07,78.3,71.9,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0024,Ana Delgado,Redes de Computadoras,16.62,85.9,72.57,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0025,Diego Reyes,Base de Datos,9.3,81.9,71.43,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0026,Andrés Reyes,Lenguajes de Programación,14.28,91.9,80.3,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0027,Valeria Sánchez,Matemática Discreta,15.6,69.7,83.23,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0028,Alonso Sánchez,Redes de Computadoras,9.82,73.4,68.4,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0029,Bruno Flores,Matemática Discreta,10.38,73.5,86.93,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0030,Mateo López,Matemática Discreta,15.18,87.3,89.1,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0031,Gabriela Mendoza,Matemática Discreta,16.12,79.9,68.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0032,Renata Mendoza,Redes de Computadoras,9.95,60.3,80.1,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0033,Luis Rodríguez,Estructuras de Datos,10.78,82.3,73.88,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0034,Renata Pérez,Redes de Computadoras,14.32,61.9,77.4,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0035,Alejandra Aguilar,Matemática Discreta,8.38,64.6,67.8,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0036,Camila Ortiz,Redes de Computadoras,16.8,87.2,89.07,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0037,Carlos Pérez,Estructuras de Datos,8.53,71.7,48.0,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0038,Alonso Herrera,Matemática Discreta,12.07,33.2,44.93,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0039,Fabián García,Base de Datos,10.68,75.6,69.43,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0040,Jorge Delgado,Redes de Computadoras,10.97,32.2,50.53,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0041,Carlos Pérez,Matemática Discreta,16.23,89.6,77.17,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0042,Sebastián Herrera,Matemática Discreta,15.25,66.4,55.87,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0043,Alonso Castillo,Estructuras de Datos,10.4,77.1,78.47,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0044,Bruno López,Lenguajes de Programación,13.8,77.9,79.3,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0045,Paula Chávez,Redes de Computadoras,10.8,47.6,48.07,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0046,Paula Flores,Estructuras de Datos,16.88,67.5,64.5,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0047,Isabela Mendoza,Redes de Computadoras,15.55,82.9,67.03,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0048,Ximena Reyes,Lenguajes de Programación,11.7,77.6,63.1,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0049,Iván López,Base de Datos,7.47,30.0,56.67,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0050,Renata Ortiz,Matemática Discreta,14.8,83.6,70.97,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0051,Alejandra Delgado,Matemática Discreta,19.45,83.7,85.63,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0052,Sofía Ortiz,Lenguajes de Programación,6.75,67.0,57.23,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0053,Gabriela Chávez,Estructuras de Datos,16.02,75.8,81.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0054,Lucía Flores,Estructuras de Datos,11.85,62.9,53.93,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0055,Ana Torres,Base de Datos,12.7,65.6,55.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0056,Diego Herrera,Redes de Computadoras,13.88,100.0,78.7,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0057,Sebastián Herrera,Redes de Computadoras,14.3,69.5,61.5,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0058,Ricardo Delgado,Estructuras de Datos,17.32,86.0,80.07,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0059,Ricardo Reyes,Base de Datos,10.1,64.6,51.53,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0060,Luis Flores,Lenguajes de Programación,9.85,86.3,73.97,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0061,Renata Salazar,Base de Datos,5.35,70.2,48.27,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0062,Jorge Salazar,Lenguajes de Programación,12.45,73.94999999999999,84.65,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0063,Luis Flores,Estructuras de Datos,19.02,91.4,89.87,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0064,Emilio Vargas,Estructuras de Datos,3.95,57.9,59.08,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0065,Tomás Herrera,Base de Datos,19.9,69.2,81.3,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0066,Alonso Chávez,Estructuras de Datos,16.9,96.3,78.27,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0067,Bruno Mendoza,Redes de Computadoras,13.9,57.5,51.13,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0068,Paula García,Lenguajes de Programación,12.3,64.0,47.03,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0069,Camila Pérez,Estructuras de Datos,13.0,72.4,69.63,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0070,Fabián Rojas,Base de Datos,6.53,49.0,60.43,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0071,Renata García,Base de Datos,8.3,79.7,71.33,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0072,Sofía Salazar,Redes de Computadoras,10.32,87.2,78.57,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0073,Tomás Chávez,Redes de Computadoras,19.98,75.3,84.67,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0074,Tomás Gutiérrez,Lenguajes de Programación,15.0,58.2,54.9,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0075,Jorge Pérez,Matemática Discreta,11.43,68.8,53.5,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0076,Sofía Rojas,Redes de Computadoras,9.08,73.0,63.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0077,Diego García,Lenguajes de Programación,18.45,97.9,77.9,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0078,Alonso Ramírez,Matemática Discreta,10.73,58.7,48.57,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0079,Mateo Flores,Lenguajes de Programación,8.03,64.1,68.03,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0080,Lucía Vargas,Estructuras de Datos,14.5,55.1,71.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0081,Ana Sánchez,Estructuras de Datos,14.9,94.5,84.83,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0082,Ximena Flores,Estructuras de Datos,16.95,80.3,86.77,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0083,Luis Torres,Lenguajes de Programación,11.77,47.9,53.77,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0084,Isabela Castillo,Base de Datos,8.95,65.7,56.3,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0085,Andrés Gutiérrez,Matemática Discreta,16.15,71.1,74.1,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0086,Emilio Herrera,Matemática Discreta,8.72,64.5,71.8,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0087,Fabián Vargas,Lenguajes de Programación,8.7,92.6,84.2,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0088,Ximena Salazar,Estructuras de Datos,15.55,73.1,91.03,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0089,Luis Ortiz,Lenguajes de Programación,11.75,67.3,66.73,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0090,Natalia Rodríguez,Estructuras de Datos,20.0,95.2,83.7,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0091,Emilio Chávez,Lenguajes de Programación,4.9,73.6,64.0,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0092,Ricardo Salazar,Base de Datos,12.3,84.3,74.77,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0093,Camila Chávez,Matemática Discreta,10.57,73.94999999999999,65.62,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0094,Ana Chávez,Base de Datos,12.07,77.8,62.73,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0095,Tomás Reyes,Estructuras de Datos,14.6,64.9,62.13,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0096,Luis Gutiérrez,Estructuras de Datos,13.5,84.1,87.53,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0097,Alejandra Rodríguez,Base de Datos,9.2,80.3,72.93,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0098,Lucía López,Lenguajes de Programación,12.8,68.2,70.37,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0099,Alonso Chávez,Matemática Discreta,15.22,87.5,70.17,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0100,Jorge Flores,Estructuras de Datos,14.5,91.2,90.4,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0101,Isabela Ortiz,Base de Datos,11.98,64.5,83.2,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0102,Fabián Torres,Base de Datos,12.8,77.6,78.1,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0103,Sofía Reyes,Base de Datos,14.43,59.7,51.4,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0104,Sofía Ramírez,Redes de Computadoras,12.43,75.6,72.83,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0105,Sofía Vargas,Estructuras de Datos,18.95,84.6,78.27,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0106,Gabriela Ramírez,Estructuras de Datos,12.45,88.3,78.93,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0107,Jorge Herrera,Matemática Discreta,9.68,60.6,64.2,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0108,Alejandra Sánchez,Lenguajes de Programación,9.53,73.94999999999999,74.62,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0109,Gabriela Mendoza,Estructuras de Datos,15.12,86.8,86.27,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0110,Alejandra Vargas,Base de Datos,15.82,69.7,64.17,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0111,Fabián Pérez,Redes de Computadoras,10.7,83.3,67.77,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0112,Mateo Ramírez,Matemática Discreta,8.7,54.8,64.63,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0113,Camila Vargas,Base de Datos,6.6,49.9,54.2,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0114,Ximena Flores,Lenguajes de Programación,14.65,57.4,58.53,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0115,Fernanda Sánchez,Estructuras de Datos,8.55,51.6,41.97,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0116,Alonso López,Base de Datos,7.57,57.3,65.37,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0117,Ximena Pérez,Lenguajes de Programación,9.15,38.2,46.5,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0118,Carlos Rodríguez,Base de Datos,8.38,75.9,54.33,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0119,Daniela Pérez,Matemática Discreta,13.6,99.8,89.9,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0120,Andrés Reyes,Redes de Computadoras,13.82,54.6,64.87,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0121,María Flores,Estructuras de Datos,12.25,82.2,70.1,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0122,María López,Estructuras de Datos,14.48,99.4,86.17,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0123,Emilio Rojas,Lenguajes de Programación,17.88,60.9,80.3,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0124,Ana Gutiérrez,Estructuras de Datos,14.0,71.4,70.25,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0125,Emilio Rojas,Redes de Computadoras,4.72,61.5,47.03,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0126,Natalia Pérez,Lenguajes de Programación,15.48,74.9,89.93,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0127,Alonso López,Matemática Discreta,7.85,56.0,70.1,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0128,Lucía López,Lenguajes de Programación,17.15,87.0,89.0,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0129,Sofía Vargas,Base de Datos,14.68,57.3,59.33,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0130,Luis Aguilar,Redes de Computadoras,13.78,100.0,79.07,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0131,Diego Delgado,Base de Datos,14.9,75.7,84.2,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0132,Andrés Flores,Redes de Computadoras,16.08,79.1,73.87,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0133,Fabián Flores,Base de Datos,12.65,90.9,72.23,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0134,Fernanda Gutiérrez,Base de Datos,19.68,100.0,86.67,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0135,Sofía López,Lenguajes de Programación,19.23,85.4,78.37,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0136,Alonso Pérez,Lenguajes de Programación,19.1,100.0,99.43,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0137,Diego Salazar,Lenguajes de Programación,12.88,92.1,78.47,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0138,Ricardo Ortiz,Estructuras de Datos,3.23,30.5,32.3,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0139,Alonso Delgado,Lenguajes de Programación,14.15,64.8,70.0,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0140,Daniela Aguilar,Matemática Discreta,18.15,97.1,86.83,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0141,Daniela Castillo,Estructuras de Datos,7.85,58.6,48.1,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0142,Valeria Reyes,Lenguajes de Programación,18.1,97.5,97.63,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0143,Alejandra Pérez,Base de Datos,9.38,68.6,55.87,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0144,Camila Sánchez,Estructuras de Datos,14.15,61.8,60.73,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0145,Diego Ramírez,Base de Datos,11.55,91.2,76.8,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0146,Carlos Chávez,Redes de Computadoras,9.12,44.7,45.43,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0147,Daniela Vargas,Estructuras de Datos,11.55,70.8,81.43,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0148,Alonso López,Base de Datos,10.88,76.1,58.13,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0149,Ximena Rodríguez,Matemática Discreta,14.07,54.8,60.3,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0150,Isabela Ramírez,Matemática Discreta,11.52,52.2,48.53,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0151,Renata Aguilar,Estructuras de Datos,11.43,45.3,49.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0152,Miguel Aguilar,Lenguajes de Programación,10.65,54.4,62.53,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0153,Ximena Salazar,Lenguajes de Programación,13.93,83.4,74.47,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0154,Tomás López,Lenguajes de Programación,17.42,94.7,87.43,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0155,Ana Ortiz,Estructuras de Datos,20.0,82.8,91.57,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0156,Paula Chávez,Redes de Computadoras,5.7,70.6,56.0,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0157,Sofía Ortiz,Lenguajes de Programación,9.47,84.8,76.83,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0158,Iván Salazar,Estructuras de Datos,15.93,84.6,88.8,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0159,Fernanda Aguilar,Estructuras de Datos,19.65,84.1,71.2,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0160,Isabela Chávez,Redes de Computadoras,15.35,69.4,62.57,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0161,Camila Salazar,Redes de Computadoras,11.27,54.2,67.97,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0162,Alejandra Reyes,Base de Datos,14.5,77.3,67.87,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0163,Bruno Sánchez,Estructuras de Datos,16.12,57.8,44.63,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0164,Ana García,Redes de Computadoras,12.35,41.9,51.87,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0165,Camila Sánchez,Lenguajes de Programación,7.35,53.1,59.6,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0166,María Vargas,Redes de Computadoras,10.55,73.94999999999999,75.32,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0167,Paula López,Matemática Discreta,14.85,64.3,65.57,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0168,Jorge Salazar,Redes de Computadoras,15.93,61.6,75.27,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0169,Renata Salazar,Estructuras de Datos,9.35,51.8,55.03,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0170,Lucía Delgado,Estructuras de Datos,15.73,100.0,91.13,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0171,Lucía Castillo,Estructuras de Datos,17.23,96.4,79.33,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0172,Emilio Flores,Matemática Discreta,7.45,52.6,45.2,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0173,Andrés Vargas,Base de Datos,3.0,61.5,55.57,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0174,Ximena Salazar,Base de Datos,8.2,73.94999999999999,65.85,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0175,Lucía Reyes,Base de Datos,15.85,100.0,87.83,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0176,Andrés López,Estructuras de Datos,12.47,74.1,67.43,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0177,Luis Sánchez,Lenguajes de Programación,9.6,59.2,53.53,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0178,Ximena Reyes,Lenguajes de Programación,19.92,90.2,82.8,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0179,Gabriela López,Estructuras de Datos,8.97,74.1,60.9,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0180,Emilio Ortiz,Estructuras de Datos,15.53,69.7,83.23,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0181,Renata Aguilar,Estructuras de Datos,13.62,92.7,64.02,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0182,Alejandra Rodríguez,Lenguajes de Programación,11.97,57.6,59.33,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0183,Iván Delgado,Lenguajes de Programación,3.65,73.3,61.1,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0184,Emilio Salazar,Matemática Discreta,7.78,76.4,68.2,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0185,Tomás López,Base de Datos,10.85,60.6,65.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0186,Valeria Castillo,Redes de Computadoras,12.82,61.2,52.1,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0187,Ximena Aguilar,Lenguajes de Programación,5.67,49.4,46.6,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0188,Camila Salazar,Estructuras de Datos,12.38,69.5,71.53,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0189,Camila Ramírez,Estructuras de Datos,19.75,75.9,80.37,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0190,Ana García,Base de Datos,10.78,63.0,61.33,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0191,Andrés García,Redes de Computadoras,19.05,80.6,73.3,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0192,Renata Mendoza,Lenguajes de Programación,12.15,74.4,62.17,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0193,Ana Pérez,Base de Datos,18.32,92.8,91.87,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0194,Luis Gutiérrez,Estructuras de Datos,9.7,44.0,38.1,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0195,Diego García,Estructuras de Datos,17.68,73.94999999999999,74.98,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0196,Miguel Salazar,Base de Datos,15.33,73.0,55.53,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0197,Lucía Herrera,Base de Datos,12.22,74.9,63.5,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0198,Carlos Reyes,Estructuras de Datos,11.4,84.8,77.13,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0199,Alejandra García,Base de Datos,11.0,61.7,39.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0200,Camila Rojas,Redes de Computadoras,16.77,81.6,79.47,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0201,Carlos Aguilar,Matemática Discreta,10.98,74.1,84.7,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0202,Alejandra Herrera,Matemática Discreta,18.9,76.4,90.27,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0203,Fabián Vargas,Lenguajes de Programación,11.75,78.7,75.97,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0204,Natalia Aguilar,Base de Datos,10.55,74.8,84.03,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0205,Emilio Mendoza,Estructuras de Datos,13.72,93.3,90.3,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0206,Diego López,Redes de Computadoras,10.32,72.9,67.0,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0207,Carlos Rojas,Base de Datos,12.97,61.3,66.88,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0208,Iván Salazar,Redes de Computadoras,13.28,58.6,49.73,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0209,Alonso García,Lenguajes de Programación,19.02,99.0,80.3,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0210,Mateo Gutiérrez,Estructuras de Datos,10.25,71.1,79.17,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0211,Jorge Torres,Matemática Discreta,11.72,74.3,76.37,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0212,Gabriela Delgado,Matemática Discreta,14.18,100.0,84.93,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0213,Alonso Chávez,Redes de Computadoras,16.32,66.3,70.17,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0214,Renata García,Lenguajes de Programación,10.55,81.1,58.37,Medio,Se recomienda reforzar habitos de estudio y asistencia.
+E0215,Sofía Herrera,Estructuras de Datos,15.55,90.3,71.37,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0216,Renata Sánchez,Estructuras de Datos,8.68,63.6,49.83,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0217,Miguel Flores,Lenguajes de Programación,13.7,89.2,69.93,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0218,Diego Herrera,Lenguajes de Programación,10.12,39.5,66.5,Alto,Requiere tutoria academica inmediata y seguimiento semanal.
+E0219,Andrés Pérez,Matemática Discreta,15.85,87.0,74.83,Bajo,Mantener el desempeno actual; sin acciones urgentes.
+E0220,Paula García,Matemática Discreta,12.65,100.0,79.93,Medio,Se recomienda reforzar habitos de estudio y asistencia.

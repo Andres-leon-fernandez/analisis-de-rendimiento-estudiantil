@@ -1,0 +1,15 @@
+{
+  "umbrales_riesgo": {
+    "umbral_promedio_alto": 10.5,
+    "umbral_promedio_medio": 13.0,
+    "umbral_asistencia_alto": 70.0,
+    "umbral_asistencia_medio": 80.0,
+    "umbral_compromiso_alto": 60.0,
+    "umbral_compromiso_medio": 65.0
+  },
+  "pesos_notas": {
+    "nota_ep1": 0.25,
+    "nota_ep2": 0.25,
+    "nota_final": 0.5
+  }
+}
